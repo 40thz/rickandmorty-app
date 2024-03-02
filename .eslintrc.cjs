@@ -69,32 +69,32 @@ module.exports = {
             position: 'before',
           },
           {
-            pattern: '@constants/**',
+            pattern: '@/constants/**',
             group: 'internal',
             position: 'after',
           },
           {
-            pattern: '@components/**',
+            pattern: '@/components/**',
             group: 'internal',
             position: 'after',
           },
           {
-            pattern: '@containers/**',
+            pattern: '@/containers/**',
             group: 'internal',
             position: 'after',
           },
           {
-            pattern: '@hooks/**',
+            pattern: '@/hooks/**',
             group: 'internal',
             position: 'after',
           },
           {
-            pattern: '@utils/**',
+            pattern: '@/utils/**',
             group: 'internal',
             position: 'after',
           },
           {
-            pattern: '@services/**',
+            pattern: '@/services/**',
             group: 'internal',
             position: 'after',
           },

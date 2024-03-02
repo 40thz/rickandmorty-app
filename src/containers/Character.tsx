@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react';
+import { genderOptionData, statusOptionData } from '@/constants/CharacterConstants/characterOptionsData';
 import { CharacterMore } from '@/components/Character/CharacterMore';
 import { InputColumnFilter, SelectorColumnFilter, Table, TableRowType } from '@/components/modules/Table';
-import { genderOptionData, statusOptionData } from '@/constants/CharactersConstants/characterOptionsData';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { setOptions } from '@/store/slices/characterSlice';
 import { characterFind } from '@/store/slices/characterSlice/reducers';
