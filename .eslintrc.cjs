@@ -44,7 +44,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 0,
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/exhaustive-deps': 'off',
     'react/no-array-index-key': 'off',
     'no-prototype-builtins': 1,
     'no-debugger': 'warn',

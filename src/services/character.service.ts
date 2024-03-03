@@ -8,8 +8,8 @@ class CharacterService extends HTTPTransport {
     super(API_PATH.CHARACTER);
   }
 
-  async find(query: string) {
-    const { data } = await this.http.get<ResponseWithInfo<Character[]>>(`/?${query}`);
+  async find(query?: string | number[]) {
+    const { data } = await this.http.get<ResponseWithInfo<Character[]>>(`/${query}`);
 
     return data;
   }

@@ -36,16 +36,16 @@ export const Selector = memo(({ label, placeholder, data, value, onChange }: Sel
       <label>{label && label}</label>
       <Listbox value={active} onChange={handleChange}>
         <div className="relative">
-          <Listbox.Button className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block min-w-[200px] p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <Listbox.Button className="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray min-w-[140px]">
             {value ? value : placeholder}
           </Listbox.Button>
-          <Listbox.Options className="absolute top-9 left-0 min-w-[200px] z-[1] dark:bg-gray-700 dark:border-gray-600 rounded-lg">
+          <Listbox.Options className="absolute top-7 left-0 w-full z-[1] bg-gray rounded-[6px]">
             {data.map((item) => {
               return (
                 <Listbox.Option key={item.id} value={item} as={Fragment}>
                   {({ active, selected }) => (
-                    <li className={`text-white px-2 py-1 ${selected && 'bg-red-800'}`}>
-                      {active && '>'}
+                    <li className={`text-white/55 px-2 py-1 cursor-pointer ${selected && 'bg-dark/55'}`}>
+                      {active && '> '}
                       {item.name}
                     </li>
                   )}

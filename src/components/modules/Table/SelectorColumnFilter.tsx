@@ -1,5 +1,5 @@
 import { memo, useCallback } from 'react';
-import { SelectedElement, Selector, SelectorProps } from '@/components/ui/Selector';
+import { SelectedElement, Selector, SelectorProps } from '@/components/shared/ui/Selector';
 import { FilterProps } from './types';
 import { useAppDispatch } from '@/store/hooks';
 
