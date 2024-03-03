@@ -2,9 +2,11 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { characherReducer } from './slices/characterSlice';
+import { episodeReducer } from './slices/episodeSlice';
 
 const rootReducer = combineReducers({
   character: characherReducer,
+  episode: episodeReducer,
 });
 
 const persistConfig = {

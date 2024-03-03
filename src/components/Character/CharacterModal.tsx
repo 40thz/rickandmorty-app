@@ -24,7 +24,9 @@ export const CharacterModal = memo(({ info }: { info: CellInfo<Character>['origi
 
   return (
     <>
-      <div onClick={() => setActive(true)}>{info.name}</div>
+      <th className="cursor-pointer" onClick={() => setActive(true)}>
+        {info.name}
+      </th>
       <Modal open={active} onClose={() => setActive(false)}>
         {info.name}
         {info.gender}

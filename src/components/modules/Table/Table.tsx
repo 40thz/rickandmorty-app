@@ -44,6 +44,7 @@ export const TableComponent = <T,>({ columns, data }: TableProps<T>) => (
                     origin: item,
                     getValue: () => getNested(item, column.accessorKey),
                   };
+
                   const child = column.cell && column.cell(info);
 
                   return (

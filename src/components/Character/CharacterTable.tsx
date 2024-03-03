@@ -23,7 +23,7 @@ export const CharacterTable = () => {
     debounceCharacterFind();
   }, [debounceCharacterFind, options]);
 
-  const columns: TableRowType<Character>[] = useMemo(() => {
+  const columns = useMemo<TableRowType<Character>[]>(() => {
     return [
       {
         accessorKey: 'image',

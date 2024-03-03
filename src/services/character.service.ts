@@ -13,8 +13,6 @@ class CharacterService extends HTTPTransport {
 
     return data;
   }
-
-  async findByName() {}
 }
 
 export const characterService = new CharacterService();
