@@ -12,7 +12,7 @@ export const CharacterTable = () => {
   const dispatch = useAppDispatch();
   const { data, options } = useAppSelector((state) => state.character);
 
-  const debounceCharacterFind = useCallback(
+  const debounceFind = useCallback(
     debounce(() => {
       dispatch(characterFind());
     }, 500),
@@ -20,8 +20,8 @@ export const CharacterTable = () => {
   );
 
   useEffect(() => {
-    debounceCharacterFind();
-  }, [debounceCharacterFind, options]);
+    debounceFind();
+  }, [debounceFind, options]);
 
   const columns = useMemo<TableRowType<Character>[]>(() => {
     return [

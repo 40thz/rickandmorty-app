@@ -10,7 +10,7 @@ export const EpisodeTable = () => {
   const dispatch = useAppDispatch();
   const { data, options } = useAppSelector((state) => state.episode);
 
-  const debounceCharacterFind = useCallback(
+  const debounceFind = useCallback(
     debounce(() => {
       dispatch(episodeFind());
     }, 500),
@@ -18,8 +18,8 @@ export const EpisodeTable = () => {
   );
 
   useEffect(() => {
-    debounceCharacterFind();
-  }, [debounceCharacterFind, options]);
+    debounceFind();
+  }, [debounceFind, options]);
 
   const columns = useMemo<TableRowType<Episode>[]>(() => {
     return [

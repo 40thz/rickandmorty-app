@@ -3,10 +3,12 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import storage from 'redux-persist/lib/storage';
 import { characherReducer } from './slices/characterSlice';
 import { episodeReducer } from './slices/episodeSlice';
+import { locationReducer } from './slices/locationSlice';
 
 const rootReducer = combineReducers({
   character: characherReducer,
   episode: episodeReducer,
+  location: locationReducer,
 });
 
 const persistConfig = {
