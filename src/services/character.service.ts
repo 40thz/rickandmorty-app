@@ -13,6 +13,12 @@ class CharacterService extends HTTPTransport {
 
     return data;
   }
+
+  async findById(ids: number[]) {
+    const { data } = await this.http.get<Character | Character[]>(`/${ids}`);
+
+    return data;
+  }
 }
 
 export const characterService = new CharacterService();

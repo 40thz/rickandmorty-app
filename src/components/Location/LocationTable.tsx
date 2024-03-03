@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo } from 'react';
-import { InputColumnFilter, Table, TableRowType } from '@/components/modules';
+import { InputColumnFilter, Table, TableRowType } from '@/components/shared/Table';
 import { debounce } from '@/utils/debounce';
+import { LocationModal } from './Modal/LocationModal';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { locationFind, setOptions } from '@/store/slices/locationSlice';
 import { Location } from '@/store/slices/locationSlice/types';
@@ -25,6 +26,7 @@ export const LocationTable = () => {
       {
         accessorKey: 'name',
         header: 'Name',
+        cell: (info) => <LocationModal info={info.origin} />,
         filter: <InputColumnFilter value={options.name} setOptions={setOptions} prop="name" />,
       },
       {

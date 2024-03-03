@@ -2,7 +2,7 @@ import { Fragment, PropsWithChildren, useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Button } from './Button';
 
-type ModalProps = {
+export type ModalProps = {
   open: boolean;
   onClose: () => void;
 } & PropsWithChildren;
@@ -12,7 +12,14 @@ export const Modal = ({ open, onClose, children }: ModalProps) => {
 
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={onClose}>
+      <Dialog
+        unmount={true}
+        open={open}
+        as="div"
+        className="relative z-10"
+        initialFocus={cancelButtonRef}
+        onClose={onClose}
+      >
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -38,8 +45,8 @@ export const Modal = ({ open, onClose, children }: ModalProps) => {
             >
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-gray text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                 <div className="bg-gray px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                  <div className="sm:flex sm:items-start">
-                    <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">{children}</div>
+                  <div className="sm:flex sm:items-start w-full">
+                    <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left w-full">{children}</div>
                   </div>
                 </div>
                 <div className="bg-gray px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">

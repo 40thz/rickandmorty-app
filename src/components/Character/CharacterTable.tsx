@@ -1,11 +1,10 @@
 import { useCallback, useEffect, useMemo } from 'react';
 import { genderOptionData, statusOptionData } from '@/constants/character';
 import { CharacterModal } from '@/components/Character';
-import { InputColumnFilter, SelectorColumnFilter, Table, TableRowType } from '@/components/modules';
 import { debounce } from '@/utils/debounce';
+import { InputColumnFilter, SelectorColumnFilter, Table, TableRowType } from '../shared/Table';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { setOptions } from '@/store/slices/characterSlice';
-import { characterFind } from '@/store/slices/characterSlice/reducers';
+import { setOptions, characterFind } from '@/store/slices/characterSlice';
 import { Character } from '@/store/slices/characterSlice/types';
 
 export const CharacterTable = () => {

@@ -1,2 +1,2 @@
-export * from './CharacterModal';
+export * from './Modal/CharacterModal';
 export * from './CharacterTable';

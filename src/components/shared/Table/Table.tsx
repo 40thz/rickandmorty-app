@@ -1,23 +1,6 @@
 import { memo } from 'react';
 import { getNested } from '@utils/getNested';
-import { Leaves } from '@/types';
-
-export type CellInfo<T> = {
-  origin: T;
-  getValue: () => string;
-};
-
-export type TableRowType<T> = {
-  header: string;
-  cell?: (value: CellInfo<T>) => React.ReactNode;
-  accessorKey: Leaves<T>;
-  filter?: React.ReactNode;
-};
-
-type TableProps<T> = {
-  columns: TableRowType<T>[];
-  data: T[] | null;
-};
+import { TableProps } from './types';
 
 export const TableComponent = <T,>({ columns, data }: TableProps<T>) => (
   <div className="rounded-3xl overflow-hidden">

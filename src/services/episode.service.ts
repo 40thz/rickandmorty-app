@@ -13,6 +13,12 @@ class EpisodeService extends HTTPTransport {
 
     return data;
   }
+
+  async findById(ids: number[]) {
+    const { data } = await this.http.get<Episode | Episode[]>(`/${ids}`);
+
+    return data;
+  }
 }
 
 export const episodeService = new EpisodeService();

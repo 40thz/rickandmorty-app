@@ -1,5 +1,4 @@
 import { useCallback, useState } from 'react';
-import { AxiosResponse } from 'axios';
 
 export const useRequest = <T>(request: () => Promise<T>) => {
   const [isLoading, setIsLoading] = useState<boolean | undefined>(true);
@@ -10,9 +9,8 @@ export const useRequest = <T>(request: () => Promise<T>) => {
     try {
       setIsLoading(true);
 
-      const { data } = (await request()) as AxiosResponse<T>;
-
-      setData(data);
+      const res = await request();
+      setData(res);
       setIsLoading(false);
     } catch (e) {
       setError(e as string);
