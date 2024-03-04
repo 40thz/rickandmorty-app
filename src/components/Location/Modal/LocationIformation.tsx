@@ -1,6 +1,5 @@
-import { CharacterModal } from '@/components/Character';
+import { Character } from '@@/store/slices/characterSlice/types';
 import { LocationModalProps } from './LocationModal';
-import { Character } from '@/store/slices/characterSlice/types';
 
 interface LocationIformationProps extends LocationModalProps {
   residents: Character | Character[] | null;
@@ -32,16 +31,11 @@ export const LocationIformation = ({ info, residents }: LocationIformationProps)
         <div className="flex flex-col max-h-[150px] overflow-auto bg-dark/20 rounded-lg p-3 gap-1">
           {Array.isArray(residents) &&
             residents.map((resident) => (
-              <CharacterModal key={resident.id} info={resident}>
-                <p className="text-sm text-white/55 cursor-pointer">{resident.name}</p>
-              </CharacterModal>
+              <p key={resident.id} className="text-sm text-white/55">
+                {resident.name}
+              </p>
             ))}
-
-          {!Array.isArray(residents) && (
-            <CharacterModal info={residents}>
-              <p className="text-sm text-white/55 cursor-pointer">{residents.name}</p>
-            </CharacterModal>
-          )}
+          {!Array.isArray(residents) && <p className="text-sm text-white/55">{residents.name}</p>}
         </div>
       </div>
     </div>

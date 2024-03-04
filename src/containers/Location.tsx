@@ -1,9 +1,8 @@
-import { LocationTable } from '@/components/Location';
-import { Menu } from '@/components/shared/Menu';
+import { LocationTable } from '@@/components/Location';
+import { ContainerLayout } from '@@/components/shared/layouts';
 
 export const Location = () => (
-  <div className="flex flex-col gap-3 max-w-[50%] w-full">
-    <Menu showLabel={false} />
+  <ContainerLayout>
     <LocationTable />
-  </div>
+  </ContainerLayout>
 );

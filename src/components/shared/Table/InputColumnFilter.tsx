@@ -1,7 +1,7 @@
 import { memo, useCallback } from 'react';
-import { Input, InputProps } from '@/components/shared/ui/Input';
+import { Input, InputProps } from '@@/components/shared/ui/Input';
+import { useAppDispatch } from '@@/store/hooks';
 import { FilterProps } from './types';
-import { useAppDispatch } from '@/store/hooks';
 
 type InputFilterProps = FilterProps & InputProps;
 

@@ -1,7 +1,7 @@
 import { memo, useCallback } from 'react';
-import { SelectedElement, Selector, SelectorProps } from '@/components/shared/ui/Selector';
+import { SelectedElement, Selector, SelectorProps } from '@@/components/shared/ui/Selector';
+import { useAppDispatch } from '@@/store/hooks';
 import { FilterProps } from './types';
-import { useAppDispatch } from '@/store/hooks';
 
 type SelectorFilterProps = SelectorProps & FilterProps;
 

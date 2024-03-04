@@ -1,11 +1,11 @@
 import { PropsWithChildren, memo, useCallback, useEffect, useRef, useState } from 'react';
-import { CellInfo } from '@components/shared/Table';
-import { Modal } from '@components/shared/ui/Modal';
-import { useRequest } from '@/hooks/useRequest';
-import { getIdFromUrlArray } from '@/utils/getIdFromUrlArr';
-import { characterService } from '@/services/character.service';
+import { CellInfo } from '@@/components/shared/Table';
+import { Modal } from '@@/components/shared/ui/Modal';
+import { useRequest } from '@@/hooks/useRequest';
+import { characterService } from '@@/services/character.service';
+import { Location } from '@@/store/slices/locationSlice/types';
+import { getIdFromUrlArray } from '@@/utils/getIdFromUrlArr';
 import { LocationIformation } from './LocationIformation';
-import { Location } from '@/store/slices/locationSlice/types';
 
 export type LocationModalProps = { info: CellInfo<Location>['origin'] } & PropsWithChildren;
 

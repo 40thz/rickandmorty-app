@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useMemo } from 'react';
-import { InputColumnFilter, Table, TableRowType } from '@/components/shared/Table';
-import { debounce } from '@/utils/debounce';
+import { InputColumnFilter, Table, TableRowType } from '@@/components/shared/Table';
+import { useAppDispatch, useAppSelector } from '@@/store/hooks';
+import { locationFind, setOptions } from '@@/store/slices/locationSlice';
+import { Location } from '@@/store/slices/locationSlice/types';
+import { debounce } from '@@/utils/debounce';
 import { LocationModal } from './Modal/LocationModal';
-import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { locationFind, setOptions } from '@/store/slices/locationSlice';
-import { Location } from '@/store/slices/locationSlice/types';
 
 export const LocationTable = () => {
   const dispatch = useAppDispatch();

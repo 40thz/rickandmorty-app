@@ -1,6 +1,6 @@
-import { Character } from '@store/slices/characterSlice/types';
-import { ResponseWithInfo } from '@store/slices/types';
-import { HTTPTransport } from '@utils/HTTPTransport';
+import { Character } from '@@/store/slices/characterSlice/types';
+import { ResponseWithInfo } from '@@/store/slices/types';
+import { HTTPTransport } from '@@/utils/HTTPTransport';
 import { API_PATH } from './types';
 
 class CharacterService extends HTTPTransport {

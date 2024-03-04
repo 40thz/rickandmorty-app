@@ -1,11 +1,11 @@
 import { PropsWithChildren, memo, useCallback, useEffect, useRef, useState } from 'react';
-import { CellInfo } from '@components/shared/Table';
-import { Modal } from '@components/shared/ui/Modal';
-import { useRequest } from '@/hooks/useRequest';
-import { getIdFromUrlArray } from '@/utils/getIdFromUrlArr';
-import { episodeService } from '@/services/episode.service';
+import { CellInfo } from '@@/components/shared/Table';
+import { Modal } from '@@/components/shared/ui/Modal';
+import { useRequest } from '@@/hooks/useRequest';
+import { episodeService } from '@@/services/episode.service';
+import { Character } from '@@/store/slices/characterSlice/types';
+import { getIdFromUrlArray } from '@@/utils/getIdFromUrlArr';
 import { CharacterInformation } from './CharacterInformation';
-import { Character } from '@/store/slices/characterSlice/types';
 
 export type CharacterInfoProps = { info: CellInfo<Character>['origin'] } & PropsWithChildren;
 
@@ -37,7 +37,7 @@ export const CharacterModal = memo(({ info, children }: CharacterInfoProps) => {
     <>
       {children && <span onClick={handleModalOpen}>{children}</span>}
       {!children && (
-        <span className="cursor-pointer font-bold" onClick={handleModalOpen}>
+        <span className="cursor-pointer font-bold hover:text-white" onClick={handleModalOpen}>
           {info.name}
         </span>
       )}

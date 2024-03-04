@@ -1,6 +1,5 @@
-import { CharacterModal } from '@/components/Character';
+import { Character } from '@@/store/slices/characterSlice/types';
 import { EpisodeModalProps } from './EpisodeModal';
-import { Character } from '@/store/slices/characterSlice/types';
 
 interface EpisodeInformationProps extends EpisodeModalProps {
   characters: Character | Character[] | null;
@@ -32,16 +31,12 @@ export const EpisodeInformation = ({ info, characters }: EpisodeInformationProps
         <div className="flex flex-col max-h-[150px] overflow-auto bg-dark/20 rounded-lg p-3 gap-1">
           {Array.isArray(characters) &&
             characters.map((character) => (
-              <CharacterModal key={character.id} info={character}>
-                <p className="text-sm text-white/55 cursor-pointer">{character.name}</p>
-              </CharacterModal>
+              <p key={character.id} className="text-sm text-white/55">
+                {character.name}
+              </p>
             ))}
 
-          {!Array.isArray(characters) && (
-            <CharacterModal info={characters}>
-              <p className="text-sm text-white/55 cursor-pointer">{characters.name}</p>
-            </CharacterModal>
-          )}
+          {!Array.isArray(characters) && <p className="text-sm text-white/55">{characters.name}</p>}
         </div>
       </div>
     </div>

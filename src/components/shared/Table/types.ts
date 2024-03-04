@@ -1,5 +1,5 @@
+import { Leaves } from '@@/types';
 import { UnknownAction } from '@reduxjs/toolkit';
-import { Leaves } from '@/types';
 
 export interface FilterProps {
   setOptions: (value: Record<string, string>) => UnknownAction;

@@ -10,6 +10,7 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "esModuleInterop": true,
     "noEmit": true,
     "jsx": "react-jsx",
     /* Linting */
@@ -18,15 +19,15 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     /* Alias */
-    "types": ["node"],
+    "types": ["@testing-library/jest-dom"],
     "paths": {
-      "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
-      "@store/*": ["./src/store/*"],
-      "@services/*": ["./src/services/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@hooks/*": ["./src/hooks/*"]
+      "@@/*": ["./src/*"],
+      "@@components/*": ["./src/components/*"],
+      "@@store/*": ["./src/store/*"],
+      "@@services/*": ["./src/services/*"],
+      "@@utils/*": ["./src/utils/*"],
+      "@@constants/*": ["./src/constants/*"],
+      "@@hooks/*": ["./src/hooks/*"]
     }
   },
   "include": ["src"]

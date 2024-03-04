@@ -1,9 +1,8 @@
-import { CharacterTable } from '@/components/Character';
-import { Menu } from '@/components/shared/Menu';
+import { CharacterTable } from '@@/components/Character';
+import { ContainerLayout } from '@@/components/shared/layouts';
 
 export const Character = () => (
-  <div className="flex flex-col gap-3">
-    <Menu showLabel={false} />
+  <ContainerLayout>
     <CharacterTable />
-  </div>
+  </ContainerLayout>
 );

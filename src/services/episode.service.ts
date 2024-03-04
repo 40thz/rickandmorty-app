@@ -1,7 +1,7 @@
-import { ResponseWithInfo } from '@store/slices/types';
-import { HTTPTransport } from '@utils/HTTPTransport';
+import { Episode } from '@@/store/slices/episodeSlice/types';
+import { ResponseWithInfo } from '@@/store/slices/types';
+import { HTTPTransport } from '@@/utils/HTTPTransport';
 import { API_PATH } from './types';
-import { Episode } from '@/store/slices/episodeSlice/types';
 
 class EpisodeService extends HTTPTransport {
   constructor() {

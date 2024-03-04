@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import { localStorageService } from '@/utils/LocalStorageService';
+import { AppContext, TAB_VALUES } from '@@/context/AppContext';
+import { localStorageService } from '@@/utils/LocalStorageService';
 import { Button } from './ui/Button';
-import { AppContext, TAB_VALUES } from '@/context/AppContext';
 
 type MenuProps = {
   showLabel?: boolean;

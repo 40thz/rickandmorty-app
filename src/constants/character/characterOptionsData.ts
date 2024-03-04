@@ -1,4 +1,4 @@
-import { CHARACTER_GENDER, CHARACTER_STATUS } from '@/store/slices/characterSlice/types';
+import { CHARACTER_GENDER, CHARACTER_STATUS } from '@@/store/slices/characterSlice/types';
 
 export const genderOptionData = [
   { id: 1, name: CHARACTER_GENDER.FEMALE },

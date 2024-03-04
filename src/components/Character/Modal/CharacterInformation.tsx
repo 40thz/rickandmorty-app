@@ -1,8 +1,7 @@
+import { CHARACTER_STATUS } from '@@/store/slices/characterSlice/types';
+import { Episode } from '@@/store/slices/episodeSlice/types';
 import classNames from 'classnames';
-import { EpisodeModal } from '@/components/Episode/Modal/EpisodeModal';
-import { CharacterInfoProps } from '..';
-import { CHARACTER_STATUS } from '@/store/slices/characterSlice/types';
-import { Episode } from '@/store/slices/episodeSlice/types';
+import { CharacterInfoProps } from './CharacterModal';
 
 interface CharacterModalProps extends CharacterInfoProps {
   episodes: Episode[] | Episode | null;
@@ -40,7 +39,7 @@ export const CharacterInformation = ({ info, episodes }: CharacterModalProps) =>
             <p className="text-sm text-white/55">{info.location.name}</p>
           </section>
           <section>
-            <p className="text-sm text-white/25">Origin Location:</p>
+            <p className="text-sm text-white/25">Origin location:</p>
             <p className="text-sm text-white/55">{info.origin.name}</p>
           </section>
         </div>
@@ -50,16 +49,12 @@ export const CharacterInformation = ({ info, episodes }: CharacterModalProps) =>
         <div className="flex flex-col max-h-[200px] overflow-auto bg-dark/20 rounded-lg p-3 gap-">
           {Array.isArray(episodes) &&
             episodes.map((episode) => (
-              <EpisodeModal key={episode.id} info={episode}>
-                <p className="text-sm text-white/55 cursor-pointer">{episode.name}</p>
-              </EpisodeModal>
+              <p key={episode.id} className="text-sm text-white/55">
+                {episode.name}
+              </p>
             ))}
 
-          {!Array.isArray(episodes) && (
-            <EpisodeModal info={episodes}>
-              <p className="text-sm text-white/55 cursor-pointer">{episodes.name}</p>
-            </EpisodeModal>
-          )}
+          {!Array.isArray(episodes) && <p className="text-sm text-white/55">{episodes.name}</p>}
         </div>
       </div>
     </div>

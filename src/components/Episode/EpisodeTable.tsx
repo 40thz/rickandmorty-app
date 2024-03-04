@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useMemo } from 'react';
-import { InputColumnFilter, Table, TableRowType } from '@/components/shared/Table';
-import { debounce } from '@/utils/debounce';
+import { InputColumnFilter, Table, TableRowType } from '@@/components/shared/Table';
+import { useAppDispatch, useAppSelector } from '@@/store/hooks';
+import { episodeFind, setOptions } from '@@/store/slices/episodeSlice';
+import { Episode } from '@@/store/slices/episodeSlice/types';
+import { debounce } from '@@/utils/debounce';
 import { EpisodeModal } from './Modal/EpisodeModal';
-import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { episodeFind, setOptions } from '@/store/slices/episodeSlice';
-import { Episode } from '@/store/slices/episodeSlice/types';
 
 export const EpisodeTable = () => {
   const dispatch = useAppDispatch();

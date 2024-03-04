@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useMemo } from 'react';
-import { genderOptionData, statusOptionData } from '@/constants/character';
-import { CharacterModal } from '@/components/Character';
-import { debounce } from '@/utils/debounce';
-import { InputColumnFilter, SelectorColumnFilter, Table, TableRowType } from '../shared/Table';
-import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { setOptions, characterFind } from '@/store/slices/characterSlice';
-import { Character } from '@/store/slices/characterSlice/types';
+import { CharacterModal } from '@@/components/Character';
+import { InputColumnFilter, SelectorColumnFilter, Table, TableRowType } from '@@/components/shared/Table';
+import { genderOptionData, statusOptionData } from '@@/constants/character';
+import { useAppDispatch, useAppSelector } from '@@/store/hooks';
+import { setOptions, characterFind } from '@@/store/slices/characterSlice';
+import { Character } from '@@/store/slices/characterSlice/types';
+import { debounce } from '@@/utils/debounce';
 
 export const CharacterTable = () => {
   const dispatch = useAppDispatch();
