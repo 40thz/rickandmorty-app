@@ -35,6 +35,16 @@ export const CharacterInformation: FC<CharacterModalProps> = ({ info, episodes }
               </p>
             </div>
           </section>
+          {info.type && (
+            <section>
+              <p className="text-sm text-white/25">Type:</p>
+              <p className="text-sm text-white/55">{info.type}</p>
+            </section>
+          )}
+          <section>
+            <p className="text-sm text-white/25">Species:</p>
+            <p className="text-sm text-white/55">{info.species}</p>
+          </section>
           <section>
             <p className="text-sm text-white/25">Last known location:</p>
             <p className="text-sm text-white/55">{info.location.name}</p>

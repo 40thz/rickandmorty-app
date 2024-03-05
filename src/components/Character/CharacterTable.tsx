@@ -7,7 +7,7 @@ import { setOptions } from '@@/store/slices/characterSlice';
 import { Character } from '@@/store/slices/characterSlice/types';
 
 export const CharacterTable = () => {
-  const { data, options } = useAppSelector((state) => state.character);
+  const { data, options, status } = useAppSelector((state) => state.character);
 
   const columns = useMemo<TableRowType<Character>[]>(() => {
     return [
@@ -65,5 +65,5 @@ export const CharacterTable = () => {
     ];
   }, [options]);
 
-  return <Table<Character> columns={columns} data={data} />;
+  return <Table<Character> columns={columns} data={data} status={status} />;
 };

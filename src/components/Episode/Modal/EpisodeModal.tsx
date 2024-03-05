@@ -1,5 +1,7 @@
 import { FC, PropsWithChildren, memo, useCallback, useEffect, useRef, useState } from 'react';
 import { CellInfo } from '@@/components/shared/Table';
+import { ErrorMessage } from '@@/components/shared/ui/ErrorMessage';
+import { Loader } from '@@/components/shared/ui/Loader';
 import { Modal } from '@@/components/shared/ui/Modal';
 import { useRequest } from '@@/hooks/useRequest';
 import { characterService } from '@@/services/character.service';
@@ -12,7 +14,7 @@ export type EpisodeModalProps = { info: CellInfo<Episode>['origin'] } & PropsWit
 export const EpisodeModal: FC<EpisodeModalProps> = memo(({ info, children }) => {
   const [active, setActive] = useState(false);
   const listIdsRef = useRef<number[]>([]);
-  const { data, refetch } = useRequest(() => characterService.findById(listIdsRef.current));
+  const { data, refetch, isLoading, error } = useRequest(() => characterService.findById(listIdsRef.current));
 
   useEffect(() => {
     if (!active) {
@@ -42,7 +44,11 @@ export const EpisodeModal: FC<EpisodeModalProps> = memo(({ info, children }) => 
         </span>
       )}
       <Modal open={active} onClose={handleModalClose}>
-        <EpisodeInformation info={info} characters={data} />
+        {isLoading && !error && <Loader className="flex justify-center" />}
+        {isLoading && error && (
+          <ErrorMessage title="Error" subTitle="Looks like something went wrong..." className="col-span-4" />
+        )}
+        {!isLoading && <EpisodeInformation info={info} characters={data} />}
       </Modal>
     </>
   );

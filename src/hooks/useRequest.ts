@@ -14,6 +14,7 @@ export const useRequest = <T>(request: () => Promise<T>) => {
       setIsLoading(false);
     } catch (e) {
       setError(e as string);
+      setIsLoading(true);
     }
   }, []);
 

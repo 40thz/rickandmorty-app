@@ -1,6 +1,8 @@
 import { memo } from 'react';
 import { GridLayout } from '@@/components/shared/layouts/GridLayout';
 import { Cart } from '@@/components/shared/ui/Cart';
+import { ErrorMessage } from '@@/components/shared/ui/ErrorMessage';
+import { Loader } from '@@/components/shared/ui/Loader';
 import { useAppSelector } from '@@/store/hooks';
 import { Episode } from '@@/store/slices/episodeSlice/types';
 import { EpisodeModal } from '../Modal/EpisodeModal';
@@ -19,8 +21,10 @@ export const EpisodeGrid = memo(() => {
 
   return (
     <GridLayout sidebar={<EpisodeSidebar />}>
-      {isLoading && !error && 'Loading'}
-      {isLoading && error && 'error messeage'}
+      {isLoading && !error && <Loader className="flex justify-center col-span-4" />}
+      {isLoading && error && (
+        <ErrorMessage subTitle="It looks like nothing was found matching these parameters." className="col-span-4" />
+      )}
       {!isLoading && !error && data && renderContent()}
     </GridLayout>
   );

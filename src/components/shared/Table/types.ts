@@ -1,3 +1,4 @@
+import { DataStatus } from '@@/store/slices/types';
 import { Leaves } from '@@/types';
 import { UnknownAction } from '@reduxjs/toolkit';
 
@@ -21,4 +22,5 @@ export type TableRowType<T> = {
 export type TableProps<T> = {
   columns: TableRowType<T>[];
   data: T[] | null;
+  status: DataStatus;
 };

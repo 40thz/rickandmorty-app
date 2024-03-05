@@ -58,33 +58,68 @@ describe('Table component', () => {
     },
   ];
 
+  const MOCK_STATUS = {
+    isLoading: false,
+    error: null,
+  };
+
   it('Table render', () => {
-    render(<Table<Character> columns={MOCK_COLUMNS} data={MOCK_DATA} />);
+    render(<Table<Character> columns={MOCK_COLUMNS} data={MOCK_DATA} status={MOCK_STATUS} />);
 
     expect(screen.getByRole('table')).not.toEqual(null);
   });
 
   it('Should render columns', () => {
-    render(<Table<Character> columns={MOCK_COLUMNS} data={MOCK_DATA} />);
+    render(<Table<Character> columns={MOCK_COLUMNS} data={MOCK_DATA} status={MOCK_STATUS} />);
 
     expect(screen.getAllByTestId(/col/i)).not.toEqual(null);
   });
 
   it('Should render row', () => {
-    render(<Table<Character> columns={[] as TableRowType<Character>[]} data={MOCK_DATA} />);
+    render(<Table<Character> columns={[] as TableRowType<Character>[]} data={MOCK_DATA} status={MOCK_STATUS} />);
 
     expect(screen.getAllByTestId(/row/i)).not.toEqual(null);
   });
 
   it('Should render cell', () => {
-    render(<Table<Character> columns={MOCK_COLUMNS} data={MOCK_DATA} />);
+    render(<Table<Character> columns={MOCK_COLUMNS} data={MOCK_DATA} status={MOCK_STATUS} />);
 
     expect(screen.getAllByTestId(/cell/i)).not.toEqual(null);
   });
 
   it('Should cell must be reassigned', () => {
-    render(<Table<Character> columns={MOCK_COLUMNS} data={MOCK_DATA} />);
+    render(<Table<Character> columns={MOCK_COLUMNS} data={MOCK_DATA} status={MOCK_STATUS} />);
 
     expect(screen.getAllByTestId(/reassigned_cell/i)).not.toEqual(null);
+  });
+
+  it('Should show loading status', () => {
+    render(
+      <Table<Character>
+        columns={MOCK_COLUMNS}
+        data={MOCK_DATA}
+        status={{
+          isLoading: true,
+          error: null,
+        }}
+      />,
+    );
+
+    expect(screen.getByText('Loading...')).not.toEqual(null);
+  });
+
+  it('Should show error message', () => {
+    render(
+      <Table<Character>
+        columns={MOCK_COLUMNS}
+        data={MOCK_DATA}
+        status={{
+          isLoading: true,
+          error: 'Bad request 400',
+        }}
+      />,
+    );
+
+    expect(screen.getByText('It looks like nothing was found matching these parameters.')).not.toEqual(null);
   });
 });

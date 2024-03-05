@@ -8,7 +8,7 @@ import { LocationModal } from './Modal/LocationModal';
 
 export const LocationTable = () => {
   const dispatch = useAppDispatch();
-  const { data, options } = useAppSelector((state) => state.location);
+  const { data, options, status } = useAppSelector((state) => state.location);
 
   const debounceFind = useCallback(
     debounce(() => {
@@ -42,5 +42,5 @@ export const LocationTable = () => {
     ];
   }, [options]);
 
-  return <Table<Location> columns={columns} data={data} />;
+  return <Table<Location> columns={columns} data={data} status={status} />;
 };

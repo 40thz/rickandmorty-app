@@ -7,7 +7,7 @@ import { Episode } from '@@/store/slices/episodeSlice/types';
 import { EpisodeModal } from './Modal/EpisodeModal';
 
 export const EpisodeTable = () => {
-  const { data, options } = useAppSelector((state) => state.episode);
+  const { data, options, status } = useAppSelector((state) => state.episode);
 
   const columns = useMemo<TableRowType<Episode>[]>(() => {
     return [
@@ -29,5 +29,5 @@ export const EpisodeTable = () => {
     ];
   }, [options]);
 
-  return <Table<Episode> columns={columns} data={data} />;
+  return <Table<Episode> columns={columns} data={data} status={status} />;
 };
