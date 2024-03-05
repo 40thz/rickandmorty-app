@@ -8,6 +8,7 @@ type SelectorFilterProps = SelectorProps & FilterProps;
 export const SelectorColumnFilter: FC<SelectorFilterProps> = memo(({ value, setOptions, prop, data, ...props }) => {
   const dispatch = useAppDispatch();
 
+  // Обновляет свойство фильтра
   const handleChange = useCallback(
     (elem: SelectedElement) => {
       dispatch(setOptions({ [prop]: elem.name }));

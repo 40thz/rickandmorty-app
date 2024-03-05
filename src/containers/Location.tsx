@@ -19,6 +19,7 @@ export const Location = () => {
   const dispatch = useAppDispatch();
   const { options, mode } = useAppSelector((state) => state.location);
 
+  // Дебаунс фетчинг
   const debounceFind = useCallback(
     debounce(() => {
       dispatch(locationFind());
@@ -26,6 +27,8 @@ export const Location = () => {
     [],
   );
 
+  // Отслеживает изменение фильтров
+  // Фетчит при изменении
   useEffect(() => {
     debounceFind();
   }, [debounceFind, options]);
@@ -33,6 +36,7 @@ export const Location = () => {
   const changeDataMode = (mode: DATA_MODE) => {
     dispatch(setDataMode(mode));
   };
+
   return (
     <ContainerLayout>
       <ModeLayout>

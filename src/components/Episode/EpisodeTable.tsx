@@ -3,12 +3,12 @@ import { InputColumnFilter, Table, TableRowType } from '@@/components/shared/Tab
 import { useAppSelector } from '@@/store/hooks';
 import { setOptions } from '@@/store/slices/episodeSlice';
 import { Episode } from '@@/store/slices/episodeSlice/types';
-
 import { EpisodeModal } from './Modal/EpisodeModal';
 
 export const EpisodeTable = () => {
   const { data, options, status } = useAppSelector((state) => state.episode);
 
+  // Формирует структуру таблицы
   const columns = useMemo<TableRowType<Episode>[]>(() => {
     return [
       {

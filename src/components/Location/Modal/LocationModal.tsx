@@ -37,7 +37,12 @@ export const LocationModal: FC<LocationModalProps> = memo(({ info, children }) =
 
   return (
     <>
-      {children && <span onClick={handleModalOpen}>{children}</span>}
+      {children && (
+        <div className="h-fit" onClick={handleModalOpen}>
+          {children}
+        </div>
+      )}
+
       {!children && (
         <span className="cursor-pointer font-bold hover:text-white" onClick={handleModalOpen}>
           {info.name}
@@ -49,6 +54,7 @@ export const LocationModal: FC<LocationModalProps> = memo(({ info, children }) =
         {isLoading && error && (
           <ErrorMessage title="Error" subTitle="Looks like something went wrong..." className="col-span-4" />
         )}
+
         {!isLoading && <LocationIformation info={info} residents={data} />}
       </Modal>
     </>

@@ -25,6 +25,7 @@ export const CharacterGrid = memo(() => {
       {isLoading && error && (
         <ErrorMessage subTitle="It looks like nothing was found matching these parameters." className="col-span-4" />
       )}
+
       {!isLoading && !error && data && renderContent()}
     </GridLayout>
   );

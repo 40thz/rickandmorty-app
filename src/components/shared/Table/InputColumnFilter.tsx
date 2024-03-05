@@ -8,6 +8,7 @@ type InputFilterProps = FilterProps & InputProps;
 export const InputColumnFilter: FC<InputFilterProps> = memo(({ setOptions, prop, value, ...props }) => {
   const dispatch = useAppDispatch();
 
+  // Обновляет свойство фильтра
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       dispatch(setOptions({ [prop]: e.target.value }));

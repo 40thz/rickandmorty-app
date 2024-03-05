@@ -3,9 +3,9 @@ import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom/client';
 import { PersistGate } from 'redux-persist/integration/react';
 import { App } from './App.tsx';
-import './index.css';
 import { ErrorBoundary } from './components/shared/ui/ErrorBoundary.tsx';
 import { persistor, store } from './store';
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

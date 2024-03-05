@@ -21,7 +21,8 @@ export const App = () => {
     <AppContext.Provider value={{ currentTab, setCurrentTab }}>
       <main className="container m-auto h-full py-40">
         {!currentTab && <Menu />}
-        {component[currentTab]}
+
+        {currentTab && component[currentTab]}
       </main>
     </AppContext.Provider>
   );

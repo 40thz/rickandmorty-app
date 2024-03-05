@@ -19,6 +19,7 @@ export const Character = () => {
   const dispatch = useAppDispatch();
   const { mode, options } = useAppSelector((state) => state.character);
 
+  // Дебаунс фетчинг
   const debounceFind = useCallback(
     debounce(() => {
       dispatch(characterFind());
@@ -26,6 +27,8 @@ export const Character = () => {
     [],
   );
 
+  // Отслеживает изменение фильтров
+  // Фетчит при изменении
   useEffect(() => {
     debounceFind();
   }, [debounceFind, options]);

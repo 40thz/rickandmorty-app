@@ -1,26 +1,14 @@
-import { useCallback, useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 import { InputColumnFilter, Table, TableRowType } from '@@/components/shared/Table';
-import { useAppDispatch, useAppSelector } from '@@/store/hooks';
-import { locationFind, setOptions } from '@@/store/slices/locationSlice';
+import { useAppSelector } from '@@/store/hooks';
+import { setOptions } from '@@/store/slices/locationSlice';
 import { Location } from '@@/store/slices/locationSlice/types';
-import { debounce } from '@@/utils/debounce';
 import { LocationModal } from './Modal/LocationModal';
 
 export const LocationTable = () => {
-  const dispatch = useAppDispatch();
   const { data, options, status } = useAppSelector((state) => state.location);
 
-  const debounceFind = useCallback(
-    debounce(() => {
-      dispatch(locationFind());
-    }, 500),
-    [],
-  );
-
-  useEffect(() => {
-    debounceFind();
-  }, [debounceFind, options]);
-
+  // Формирует структуру таблицы
   const columns = useMemo<TableRowType<Location>[]>(() => {
     return [
       {

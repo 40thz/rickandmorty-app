@@ -37,17 +37,24 @@ export const CharacterModal: FC<CharacterInfoProps> = memo(({ info, children }) 
 
   return (
     <>
-      {children && <div onClick={handleModalOpen}>{children}</div>}
+      {children && (
+        <div className="h-fit" onClick={handleModalOpen}>
+          {children}
+        </div>
+      )}
+
       {!children && (
         <span className="cursor-pointer font-bold hover:text-white" onClick={handleModalOpen}>
           {info.name}
         </span>
       )}
+
       <Modal open={active} onClose={handleModalClose}>
         {isLoading && !error && <Loader className="flex justify-center" />}
         {isLoading && error && (
           <ErrorMessage title="Error" subTitle="Looks like something went wrong..." className="col-span-4" />
         )}
+
         {!isLoading && <CharacterInformation info={info} episodes={data} />}
       </Modal>
     </>

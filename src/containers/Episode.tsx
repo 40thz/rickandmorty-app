@@ -19,6 +19,7 @@ export const Episode = () => {
   const dispatch = useAppDispatch();
   const { options, mode } = useAppSelector((state) => state.episode);
 
+  // Дебаунс фетчинг
   const debounceFind = useCallback(
     debounce(() => {
       dispatch(episodeFind());
@@ -26,6 +27,8 @@ export const Episode = () => {
     [],
   );
 
+  // Отслеживает изменение фильтров
+  // Фетчит при изменении
   useEffect(() => {
     debounceFind();
   }, [debounceFind, options]);

@@ -9,12 +9,13 @@ import { Character } from '@@/store/slices/characterSlice/types';
 export const CharacterTable = () => {
   const { data, options, status } = useAppSelector((state) => state.character);
 
+  // Формирует структуру таблицы
   const columns = useMemo<TableRowType<Character>[]>(() => {
     return [
       {
         accessorKey: 'image',
         header: 'Image',
-        cell: (info) => <img src={info.getValue()} className="w-20 rounded-2xl" />,
+        cell: (info) => <img src={info.origin.image} className="w-20 rounded-2xl cursor-pointer" />,
       },
       {
         accessorKey: 'name',

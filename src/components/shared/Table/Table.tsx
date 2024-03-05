@@ -49,14 +49,12 @@ export const TableComponent = <T,>({ columns, data, status: { isLoading, error }
               ))}
             </tr>
           </thead>
-          <tbody className="relative overflow-x-auto max-h-[300px]">
-            {isLoading && !error && <Loader className="flex justify-center" />}
-            {isLoading && error && (
-              <ErrorMessage subTitle="It looks like nothing was found matching these parameters." />
-            )}
-            {!isLoading && !error && renderRows()}
-          </tbody>
+          <tbody className="relative overflow-x-auto max-h-[300px]">{!isLoading && !error && renderRows()}</tbody>
         </table>
+        {isLoading && !error && <Loader className="flex justify-center mt-6" />}
+        {isLoading && error && (
+          <ErrorMessage className="m-auto mt-6" subTitle="It looks like nothing was found matching these parameters." />
+        )}
       </div>
       <div className="flex justify-end bg-dark px-9 py-4" />
     </div>
