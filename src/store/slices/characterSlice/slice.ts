@@ -1,20 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { characterFind } from './reducers';
-import { CharacterState } from './types';
+import { CharacterState, DATA_TYPE } from './types';
 
 const initialState: CharacterState = {
+  type: DATA_TYPE.TABLE,
   options: {
     name: '',
     species: '',
     type: '',
     gender: '',
     status: '',
-    page: 1,
   },
-  info: null,
   data: [],
-  isLoading: true,
-  error: null,
+  status: {
+    isLoading: true,
+    error: null,
+  },
 };
 
 const characterSlice = createSlice({
@@ -24,29 +25,30 @@ const characterSlice = createSlice({
     setOptions(state, action) {
       state.options = { ...state.options, ...action.payload };
     },
+    setDataType(state, { payload }) {
+      state.type = payload;
+    },
   },
 
   extraReducers: (builder) => {
     builder.addCase(characterFind.pending, (state) => {
-      state.isLoading = true;
+      state.status.isLoading = true;
     });
 
-    builder.addCase(characterFind.fulfilled, (state, { payload: { results, info } }) => {
-      state.info = info;
+    builder.addCase(characterFind.fulfilled, (state, { payload: { results } }) => {
       state.data = results;
-      state.isLoading = false;
-      state.error = null;
+      state.status.isLoading = false;
+      state.status.error = null;
     });
 
     builder.addCase(characterFind.rejected, (state, action) => {
-      state.info = null;
       state.data = [];
-      state.isLoading = true;
-      state.error = action.error.message;
+      state.status.isLoading = true;
+      state.status.error = action.error.message;
     });
   },
 });
 
-export const { setOptions } = characterSlice.actions;
+export const { setOptions, setDataType } = characterSlice.actions;
 
 export const characherReducer = characterSlice.reducer;

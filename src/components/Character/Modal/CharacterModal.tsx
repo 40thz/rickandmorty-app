@@ -12,7 +12,7 @@ export type CharacterInfoProps = { info: CellInfo<Character>['origin'] } & Props
 export const CharacterModal = memo(({ info, children }: CharacterInfoProps) => {
   const [active, setActive] = useState(false);
   const listIdsRef = useRef<number[]>([]);
-  const { data, refetch } = useRequest(() => episodeService.findById(listIdsRef.current));
+  const { isLoading, data, refetch } = useRequest(() => episodeService.findById(listIdsRef.current));
 
   useEffect(() => {
     if (!active) {
@@ -35,14 +35,15 @@ export const CharacterModal = memo(({ info, children }: CharacterInfoProps) => {
 
   return (
     <>
-      {children && <span onClick={handleModalOpen}>{children}</span>}
+      {children && <div onClick={handleModalOpen}>{children}</div>}
       {!children && (
         <span className="cursor-pointer font-bold hover:text-white" onClick={handleModalOpen}>
           {info.name}
         </span>
       )}
       <Modal open={active} onClose={handleModalClose}>
-        <CharacterInformation info={info} episodes={data} />
+        {isLoading && <div className="text-xl text-white">Loading</div>}
+        {!isLoading && <CharacterInformation info={info} episodes={data} />}
       </Modal>
     </>
   );

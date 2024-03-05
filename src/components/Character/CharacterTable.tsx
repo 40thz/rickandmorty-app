@@ -1,26 +1,13 @@
-import { useCallback, useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 import { CharacterModal } from '@@/components/Character';
 import { InputColumnFilter, SelectorColumnFilter, Table, TableRowType } from '@@/components/shared/Table';
 import { genderOptionData, statusOptionData } from '@@/constants/character';
-import { useAppDispatch, useAppSelector } from '@@/store/hooks';
-import { setOptions, characterFind } from '@@/store/slices/characterSlice';
+import { useAppSelector } from '@@/store/hooks';
+import { setOptions } from '@@/store/slices/characterSlice';
 import { Character } from '@@/store/slices/characterSlice/types';
-import { debounce } from '@@/utils/debounce';
 
 export const CharacterTable = () => {
-  const dispatch = useAppDispatch();
   const { data, options } = useAppSelector((state) => state.character);
-
-  const debounceFind = useCallback(
-    debounce(() => {
-      dispatch(characterFind());
-    }, 500),
-    [],
-  );
-
-  useEffect(() => {
-    debounceFind();
-  }, [debounceFind, options]);
 
   const columns = useMemo<TableRowType<Character>[]>(() => {
     return [
@@ -74,7 +61,6 @@ export const CharacterTable = () => {
       {
         accessorKey: 'location.name',
         header: 'Location',
-        // cell: (info) => <CharacterModal info={info} />,
       },
     ];
   }, [options]);

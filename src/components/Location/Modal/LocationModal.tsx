@@ -37,7 +37,7 @@ export const LocationModal = memo(({ info, children }: LocationModalProps) => {
     <>
       {children && <span onClick={handleModalOpen}>{children}</span>}
       {!children && (
-        <span className="cursor-pointer font-bold" onClick={handleModalOpen}>
+        <span className="cursor-pointer font-bold hover:text-white" onClick={handleModalOpen}>
           {info.name}
         </span>
       )}

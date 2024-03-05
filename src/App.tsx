@@ -19,10 +19,10 @@ export const App = () => {
 
   return (
     <AppContext.Provider value={{ currentTab, setCurrentTab }}>
-      <div className="flex justify-center items-center h-full">
+      <main className="container m-auto h-full py-40">
         {!currentTab && <Menu />}
         {component[currentTab]}
-      </div>
+      </main>
     </AppContext.Provider>
   );
 };

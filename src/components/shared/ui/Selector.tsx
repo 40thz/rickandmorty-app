@@ -32,11 +32,15 @@ export const Selector = memo(({ label, placeholder, data, value, onChange }: Sel
   };
 
   return (
-    <>
-      <label>{label && label}</label>
+    <div>
+      {label && (
+        <label>
+          <div className="text-white/55 mb-2  uppercase font-bold">{label}</div>
+        </label>
+      )}
       <Listbox value={active} onChange={handleChange}>
         <div className="relative">
-          <Listbox.Button className="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray min-w-[140px]">
+          <Listbox.Button className="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray min-w-[140px] w-full">
             {value ? value : placeholder}
           </Listbox.Button>
           <Listbox.Options className="absolute top-7 left-0 w-full z-[1] bg-gray rounded-[6px]">
@@ -55,6 +59,6 @@ export const Selector = memo(({ label, placeholder, data, value, onChange }: Sel
           </Listbox.Options>
         </div>
       </Listbox>
-    </>
+    </div>
   );
 });

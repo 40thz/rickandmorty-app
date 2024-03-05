@@ -1,4 +1,4 @@
-import { Info } from '../types';
+import { DataStatus } from '../types';
 
 export enum CHARACTER_STATUS {
   ALIVE = 'Alive',
@@ -11,6 +11,11 @@ export enum CHARACTER_GENDER {
   MALE = 'Male',
   GENDERLESS = 'Genderless',
   UNKNOWN = 'unknown',
+}
+
+export enum DATA_TYPE {
+  TABLE = 'Table',
+  GRID = 'Grid',
 }
 
 type Origin = {
@@ -43,13 +48,11 @@ type CharacterOptions = {
   type: string;
   gender: string;
   status: string;
-  page: number | string;
 };
 
 export type CharacterState = {
+  type: DATA_TYPE;
   options: CharacterOptions;
-  info: Info | null;
   data: Character[] | null;
-  isLoading: boolean;
-  error?: string | null;
+  status: DataStatus;
 };
