@@ -1,4 +1,4 @@
-import { Info } from '../types';
+import { DATA_MODE, DataStatus } from '../types';
 
 export type Episode = {
   id: number;
@@ -13,13 +13,11 @@ export type Episode = {
 type EpisodeOptions = {
   name: string;
   episode: string;
-  page: number | string;
 };
 
 export type EpisodeState = {
+  mode: DATA_MODE;
   options: EpisodeOptions;
-  info: Info | null;
   data: Episode[] | null;
-  isLoading: boolean;
-  error?: string | null;
+  status: DataStatus;
 };

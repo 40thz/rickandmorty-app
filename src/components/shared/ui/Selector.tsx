@@ -1,4 +1,4 @@
-import { Fragment, memo, useState } from 'react';
+import { FC, Fragment, memo, useState } from 'react';
 import { Listbox } from '@headlessui/react';
 
 export type SelectedElement = { id: number; name: string };
@@ -11,7 +11,7 @@ export type SelectorProps = {
   onChange?: (value: SelectedElement) => void;
 };
 
-export const Selector = memo(({ label, placeholder, data, value, onChange }: SelectorProps) => {
+export const Selector: FC<SelectorProps> = memo(({ label, placeholder, data, value, onChange }) => {
   const [active, setActive] = useState(data.find((item) => item.name === value));
 
   const handleChange = (elem: SelectedElement) => {

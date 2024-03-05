@@ -1,13 +1,13 @@
-import { Fragment, PropsWithChildren, useRef } from 'react';
+import { FC, Fragment, PropsWithChildren, useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Button } from './Button';
 
-export type ModalProps = {
+export interface ModalProps extends PropsWithChildren {
   open: boolean;
   onClose: () => void;
-} & PropsWithChildren;
+}
 
-export const Modal = ({ open, onClose, children }: ModalProps) => {
+export const Modal: FC<ModalProps> = ({ open, onClose, children }) => {
   const cancelButtonRef = useRef(null);
 
   return (

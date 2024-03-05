@@ -1,4 +1,4 @@
-import { PropsWithChildren, memo, useCallback, useEffect, useRef, useState } from 'react';
+import { FC, PropsWithChildren, memo, useCallback, useEffect, useRef, useState } from 'react';
 import { CellInfo } from '@@/components/shared/Table';
 import { Modal } from '@@/components/shared/ui/Modal';
 import { useRequest } from '@@/hooks/useRequest';
@@ -9,7 +9,7 @@ import { CharacterInformation } from './CharacterInformation';
 
 export type CharacterInfoProps = { info: CellInfo<Character>['origin'] } & PropsWithChildren;
 
-export const CharacterModal = memo(({ info, children }: CharacterInfoProps) => {
+export const CharacterModal: FC<CharacterInfoProps> = memo(({ info, children }) => {
   const [active, setActive] = useState(false);
   const listIdsRef = useRef<number[]>([]);
   const { isLoading, data, refetch } = useRequest(() => episodeService.findById(listIdsRef.current));

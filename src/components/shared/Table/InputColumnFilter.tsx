@@ -1,11 +1,11 @@
-import { memo, useCallback } from 'react';
+import { FC, memo, useCallback } from 'react';
 import { Input, InputProps } from '@@/components/shared/ui/Input';
 import { useAppDispatch } from '@@/store/hooks';
 import { FilterProps } from './types';
 
 type InputFilterProps = FilterProps & InputProps;
 
-export const InputColumnFilter = memo(({ setOptions, prop, value, ...props }: InputFilterProps) => {
+export const InputColumnFilter: FC<InputFilterProps> = memo(({ setOptions, prop, value, ...props }) => {
   const dispatch = useAppDispatch();
 
   const handleChange = useCallback(

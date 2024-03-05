@@ -1,10 +1,10 @@
-import { memo } from 'react';
+import { FC, memo } from 'react';
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
 }
 
-export const Input = memo(({ label, ...props }: InputProps) => (
+export const Input: FC<InputProps> = memo(({ label, ...props }) => (
   <label>
     {label && <div className="text-white/55 mb-2 uppercase font-bold">{label}</div>}
     <input

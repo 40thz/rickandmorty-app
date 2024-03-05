@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Character } from '@@/store/slices/characterSlice/types';
 import { EpisodeModalProps } from './EpisodeModal';
 
@@ -5,7 +6,7 @@ interface EpisodeInformationProps extends EpisodeModalProps {
   characters: Character | Character[] | null;
 }
 
-export const EpisodeInformation = ({ info, characters }: EpisodeInformationProps) => {
+export const EpisodeInformation: FC<EpisodeInformationProps> = ({ info, characters }) => {
   if (!characters) {
     return;
   }

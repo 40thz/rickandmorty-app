@@ -1,4 +1,4 @@
-import { Info } from '../types';
+import { DATA_MODE, DataStatus } from '../types';
 
 export type Location = {
   id: number;
@@ -13,13 +13,11 @@ type LocationOptions = {
   name: string;
   type: string;
   dimension: string;
-  page: number | string;
 };
 
 export type LocationState = {
+  mode: DATA_MODE;
   options: LocationOptions;
-  info: Info | null;
   data: Location[] | null;
-  isLoading: boolean;
-  error?: string | null;
+  status: DataStatus;
 };

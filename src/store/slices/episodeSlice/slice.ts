@@ -1,17 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { DATA_MODE } from '../types';
 import { episodeFind } from './reducers';
 import { EpisodeState } from './types';
 
 const initialState: EpisodeState = {
+  mode: DATA_MODE.TABLE,
   options: {
     name: '',
     episode: '',
-    page: 1,
   },
-  info: null,
   data: [],
-  isLoading: true,
-  error: null,
+  status: {
+    isLoading: true,
+    error: null,
+  },
 };
 
 const episodeSlice = createSlice({
@@ -21,29 +23,30 @@ const episodeSlice = createSlice({
     setOptions(state, action) {
       state.options = { ...state.options, ...action.payload };
     },
+    setDataMode(state, { payload }) {
+      state.mode = payload;
+    },
   },
 
   extraReducers: (builder) => {
     builder.addCase(episodeFind.pending, (state) => {
-      state.isLoading = true;
+      state.status.isLoading = true;
     });
 
-    builder.addCase(episodeFind.fulfilled, (state, { payload: { results, info } }) => {
-      state.info = info;
+    builder.addCase(episodeFind.fulfilled, (state, { payload: { results } }) => {
       state.data = results;
-      state.isLoading = false;
-      state.error = null;
+      state.status.isLoading = false;
+      state.status.error = null;
     });
 
     builder.addCase(episodeFind.rejected, (state, action) => {
-      state.info = null;
       state.data = [];
-      state.isLoading = true;
-      state.error = action.error.message;
+      state.status.isLoading = true;
+      state.status.error = action.error.message;
     });
   },
 });
 
-export const { setOptions } = episodeSlice.actions;
+export const { setOptions, setDataMode } = episodeSlice.actions;
 
 export const episodeReducer = episodeSlice.reducer;

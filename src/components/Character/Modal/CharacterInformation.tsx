@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { CHARACTER_STATUS } from '@@/store/slices/characterSlice/types';
 import { Episode } from '@@/store/slices/episodeSlice/types';
 import classNames from 'classnames';
@@ -7,7 +8,7 @@ interface CharacterModalProps extends CharacterInfoProps {
   episodes: Episode[] | Episode | null;
 }
 
-export const CharacterInformation = ({ info, episodes }: CharacterModalProps) => {
+export const CharacterInformation: FC<CharacterModalProps> = ({ info, episodes }) => {
   const styles = {
     ['bg-red']: info.status === CHARACTER_STATUS.DEAD,
     ['bg-green']: info.status === CHARACTER_STATUS.ALIVE,

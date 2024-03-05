@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { DATA_MODE } from '../types';
 import { characterFind } from './reducers';
-import { CharacterState, DATA_TYPE } from './types';
+import { CharacterState } from './types';
 
 const initialState: CharacterState = {
-  type: DATA_TYPE.TABLE,
+  mode: DATA_MODE.TABLE,
   options: {
     name: '',
     species: '',
@@ -25,8 +26,8 @@ const characterSlice = createSlice({
     setOptions(state, action) {
       state.options = { ...state.options, ...action.payload };
     },
-    setDataType(state, { payload }) {
-      state.type = payload;
+    setDataMode(state, { payload }) {
+      state.mode = payload;
     },
   },
 
@@ -49,6 +50,6 @@ const characterSlice = createSlice({
   },
 });
 
-export const { setOptions, setDataType } = characterSlice.actions;
+export const { setOptions, setDataMode } = characterSlice.actions;
 
 export const characherReducer = characterSlice.reducer;

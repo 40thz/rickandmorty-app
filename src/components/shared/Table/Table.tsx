@@ -12,7 +12,7 @@ export const TableComponent = <T,>({ columns, data }: TableProps<T>) => (
               <th data-testid="col" key={colum.accessorKey} scope="col" className="px-6 py-3 pt-5 bg-dark align-top">
                 <div className="flex flex-col gap-2">
                   <div>{colum.header}</div>
-                  {colum.filter && <div>{colum.filter}</div>}
+                  {colum.filter && <div className="max-w-[150px]">{colum.filter}</div>}
                 </div>
               </th>
             ))}

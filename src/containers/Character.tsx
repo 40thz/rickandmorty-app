@@ -1,23 +1,23 @@
 import { useCallback, useEffect } from 'react';
 import { CharacterTable } from '@@/components/Character';
 import { CharacterGrid } from '@@/components/Character/CharacterGrid';
-import { ContainerLayout } from '@@/components/shared/layouts';
+import { ContainerLayout, ModeLayout } from '@@/components/shared/layouts';
 import { Button } from '@@/components/shared/ui/Button';
 import { GridIcon } from '@@/components/shared/ui/icons/GridIcon';
 import { TableIcon } from '@@/components/shared/ui/icons/TableIcon';
 import { useAppDispatch, useAppSelector } from '@@/store/hooks';
-import { characterFind, setDataType } from '@@/store/slices/characterSlice';
-import { DATA_TYPE } from '@@/store/slices/characterSlice/types';
+import { characterFind, setDataMode } from '@@/store/slices/characterSlice';
+import { DATA_MODE } from '@@/store/slices/types';
 import { debounce } from '@@/utils/debounce';
 
 const component = {
-  [DATA_TYPE.TABLE]: <CharacterTable />,
-  [DATA_TYPE.GRID]: <CharacterGrid />,
+  [DATA_MODE.TABLE]: <CharacterTable />,
+  [DATA_MODE.GRID]: <CharacterGrid />,
 };
 
 export const Character = () => {
   const dispatch = useAppDispatch();
-  const { type, options } = useAppSelector((state) => state.character);
+  const { mode, options } = useAppSelector((state) => state.character);
 
   const debounceFind = useCallback(
     debounce(() => {
@@ -30,17 +30,18 @@ export const Character = () => {
     debounceFind();
   }, [debounceFind, options]);
 
-  const changeDataType = (type: DATA_TYPE) => {
-    dispatch(setDataType(type));
+  const changeDataMode = (mode: DATA_MODE) => {
+    dispatch(setDataMode(mode));
   };
 
   return (
     <ContainerLayout>
-      <div className="flex gap-3 bg-dark/85 rounded-lg w-fit p-2">
-        <Button title="TABLE MODE" icon={<TableIcon />} onClick={() => changeDataType(DATA_TYPE.TABLE)} />
-        <Button title="GRID MODE" icon={<GridIcon />} onClick={() => changeDataType(DATA_TYPE.GRID)} />
-      </div>
-      {component[type]}
+      <ModeLayout>
+        <Button title="TABLE MODE" icon={<TableIcon />} onClick={() => changeDataMode(DATA_MODE.TABLE)} />
+        <Button title="GRID MODE" icon={<GridIcon />} onClick={() => changeDataMode(DATA_MODE.GRID)} />
+      </ModeLayout>
+
+      {component[mode]}
     </ContainerLayout>
   );
 };

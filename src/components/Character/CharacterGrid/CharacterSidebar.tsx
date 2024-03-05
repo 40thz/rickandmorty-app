@@ -1,14 +1,13 @@
-import { memo } from 'react';
 import { InputColumnFilter, SelectorColumnFilter } from '@@/components/shared/Table';
 import { genderOptionData, statusOptionData } from '@@/constants/character';
 import { useAppSelector } from '@@/store/hooks';
 import { setOptions } from '@@/store/slices/characterSlice';
 
-export const CharacterSidebar = memo(() => {
+export const CharacterSidebar = () => {
   const { name, gender, species, type, status } = useAppSelector((state) => state.character.options);
 
   return (
-    <div className="flex flex-col gap-3 w-[80%]">
+    <form className="flex flex-col gap-3 w-[80%]">
       <InputColumnFilter value={name} setOptions={setOptions} prop="name" label="Name" />
       <SelectorColumnFilter
         value={gender}
@@ -28,6 +27,6 @@ export const CharacterSidebar = memo(() => {
       />
       <InputColumnFilter value={species} setOptions={setOptions} prop="species" label="Species" />
       <InputColumnFilter value={type} setOptions={setOptions} prop="type" label="Type" />
-    </div>
+    </form>
   );
-});
+};

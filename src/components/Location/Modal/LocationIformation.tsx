@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Character } from '@@/store/slices/characterSlice/types';
 import { LocationModalProps } from './LocationModal';
 
@@ -5,7 +6,7 @@ interface LocationIformationProps extends LocationModalProps {
   residents: Character | Character[] | null;
 }
 
-export const LocationIformation = ({ info, residents }: LocationIformationProps) => {
+export const LocationIformation: FC<LocationIformationProps> = ({ info, residents }) => {
   if (!residents) {
     return;
   }

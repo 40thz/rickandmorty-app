@@ -1,3 +1,8 @@
+export enum DATA_MODE {
+  TABLE = 'Table',
+  GRID = 'Grid',
+}
+
 export type Info = {
   count: number;
   pages: number;

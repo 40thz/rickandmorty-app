@@ -1,4 +1,4 @@
-import { DataStatus } from '../types';
+import { DATA_MODE, DataStatus } from '../types';
 
 export enum CHARACTER_STATUS {
   ALIVE = 'Alive',
@@ -11,11 +11,6 @@ export enum CHARACTER_GENDER {
   MALE = 'Male',
   GENDERLESS = 'Genderless',
   UNKNOWN = 'unknown',
-}
-
-export enum DATA_TYPE {
-  TABLE = 'Table',
-  GRID = 'Grid',
 }
 
 type Origin = {
@@ -51,7 +46,7 @@ type CharacterOptions = {
 };
 
 export type CharacterState = {
-  type: DATA_TYPE;
+  mode: DATA_MODE;
   options: CharacterOptions;
   data: Character[] | null;
   status: DataStatus;
