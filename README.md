@@ -46,37 +46,37 @@
     │   ├── main.ts
     │   ├── types.ts
     │   ├── components 
-    │   │   ├── Character
-    │   │   │   ├── CharacterTable.tsx 
+    │   │   ├── Character                            # Основной компонент Character
+    │   │   │   ├── CharacterTable.tsx               # Шаблон Table режима 
     │   │   │   ├── index.ts 
-    │   │   │   ├── CharacterGrid 
+    │   │   │   ├── CharacterGrid                    # Шаблон Grid режима 
     │   │   │   │   ├── CharacterGrid.tsx 
     │   │   │   │   ├── CharacterSidebar.tsx 
     │   │   │   │   ├── index.ts 
     │   │   │   ├── Modal 
     │   │   │   │   ├── CharacterInformation.tsx 
     │   │   │   │   ├── CharacterModal.tsx 
-    │   │   ├── Episode 
-    │   │   │   ├── EpisodeTable.tsx 
+    │   │   ├── Episode                              # Основной компонент Episode 
+    │   │   │   ├── EpisodeTable.tsx                 # Шаблон Table режима
     │   │   │   ├── index.ts 
-    │   │   │   ├── EpisodeGrid 
+    │   │   │   ├── EpisodeGrid                      # Шаблон Grid режима
     │   │   │   │   ├── EpisodeGrid.tsx 
     │   │   │   │   ├── EpisodeSidebar.tsx 
     │   │   │   │   ├── index.ts 
     │   │   │   ├── Modal 
     │   │   │   │   ├── EpisodeInformation.tsx 
     │   │   │   │   ├── EpisodeModal.tsx 
-    │   │   ├── Location 
+    │   │   ├── Location                             # Основной компонент Location
+    │   │   │   ├── LocationTable.tsx                # Шаблон Table режима
     │   │   │   ├── index.ts 
-    │   │   │   ├── LocationTable.tsx 
-    │   │   │   ├── LocationGrid 
+    │   │   │   ├── LocationGrid                     # Шаблон Grid режима
     │   │   │   │   ├── index.ts 
     │   │   │   │   ├── LocationGrid.tsx 
     │   │   │   │   ├── LocationSidebar.tsx 
     │   │   │   ├── Modal 
     │   │   │   │   ├── LocationIformation.tsx 
     │   │   │   │   ├── LocationModal.tsx 
-    │   │   ├── shared 
+    │   │   ├── shared                               # Переиспольземые компоненты
     │   │   │   ├── Menu.tsx 
     │   │   │   ├── layouts 
     │   │   │   │   ├── ContainerLayout.tsx 
@@ -103,45 +103,45 @@
     │   │   │   │   ├── icons 
     │   │   │   │   │   ├── GridIcon.tsx 
     │   │   │   │   │   ├── TableIcon.tsx 
-    │   ├── constants 
+    │   ├── constants                                # Переиспользуемые константы
     │   │   ├── character 
     │   │   │   ├── characterOptionsData.ts 
     │   │   │   ├── index.ts 
-    │   ├── containers 
+    │   ├── containers                               # Основные структурированные компоненты сущностей ( точки входа )
     │   │   ├── Character.tsx 
     │   │   ├── Episode.tsx 
     │   │   ├── Location.tsx 
     │   ├── context 
     │   │   ├── AppContext.ts 
-    │   ├── hooks 
+    │   ├── hooks                                    # Кастомные хуки
     │   │   ├── useRequest.ts 
-    │   ├── services 
+    │   ├── services                                 # API методы
     │   │   ├── character.service.ts 
     │   │   ├── episode.service.ts 
     │   │   ├── location.service.ts 
     │   │   ├── types.ts 
-    │   ├── store 
+    │   ├── store                                    # Redux / redux-persist
     │   │   ├── hooks.ts 
     │   │   ├── index.ts 
     │   │   ├── store.ts 
     │   │   ├── slices 
     │   │   │   ├── types.ts 
-    │   │   │   ├── characterSlice 
+    │   │   │   ├── characterSlice                   # Основная сущность character, хранит в себе: состояния / типы
     │   │   │   │   ├── reducers.ts 
     │   │   │   │   ├── slice.ts 
     │   │   │   │   ├── index.ts
     │   │   │   │   ├── types.ts 
-    │   │   │   ├── episodeSlice 
+    │   │   │   ├── episodeSlice                     # Основная сущность episode, хранит в себе: состояния / типы
     │   │   │   │   ├── reducers.ts 
     │   │   │   │   ├── slice.ts 
     │   │   │   │   ├── index.ts 
     │   │   │   │   ├── types.ts 
-    │   │   │   ├── locationSlice 
+    │   │   │   ├── locationSlice                    # Основная сущность location, хранит в себе: состояния / типы
     │   │   │   │   ├── reducers.ts 
     │   │   │   │   ├── slice.ts 
     │   │   │   │   ├── index.ts 
     │   │   │   │   ├── types.ts 
-    │   ├── utils 
+    │   ├── utils                                    # Переиспользуемые функции / хелпперы
     │   │   ├── debounce.ts 
     │   │   ├── getIdFromUrlArr.ts 
     │   │   ├── getNested.ts 
