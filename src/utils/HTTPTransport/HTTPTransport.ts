@@ -1,7 +1,7 @@
 import { AxiosInstance } from 'axios';
 import { axiosInstance } from './axiosInstance';
 
-const API_URL = process.env.API_URL;
+const API_URL = 'https://rickandmortyapi.com/api';
 
 export abstract class HTTPTransport {
   protected http: AxiosInstance;

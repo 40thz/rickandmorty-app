@@ -1,6 +1,6 @@
 import { FC, memo, useCallback } from 'react';
-import { SelectedElement, Selector, SelectorProps } from '@@/components/shared/ui/Selector';
 import { useAppDispatch } from '@@/store/hooks';
+import { SelectedElement, Selector, SelectorProps } from '@@/components/shared/ui/Selector';
 import { FilterProps } from './types';
 
 type SelectorFilterProps = SelectorProps & FilterProps;

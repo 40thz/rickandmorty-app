@@ -1,12 +1,12 @@
 import { FC, PropsWithChildren, memo, useCallback, useEffect, useRef, useState } from 'react';
+import { Character } from '@@/store/slices/characterSlice/types';
 import { CellInfo } from '@@/components/shared/Table';
 import { ErrorMessage } from '@@/components/shared/ui/ErrorMessage';
 import { Loader } from '@@/components/shared/ui/Loader';
 import { Modal } from '@@/components/shared/ui/Modal';
 import { useRequest } from '@@/hooks/useRequest';
-import { episodeService } from '@@/services/episode.service';
-import { Character } from '@@/store/slices/characterSlice/types';
 import { getIdFromUrlArray } from '@@/utils/getIdFromUrlArr';
+import { episodeService } from '@@/services/episode.service';
 import { CharacterInformation } from './CharacterInformation';
 
 export type CharacterInfoProps = { info: CellInfo<Character>['origin'] } & PropsWithChildren;

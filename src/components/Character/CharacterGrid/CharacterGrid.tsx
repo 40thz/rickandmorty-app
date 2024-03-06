@@ -1,11 +1,11 @@
 import { memo } from 'react';
+import { useAppSelector } from '@@/store/hooks';
+import { Character } from '@@/store/slices/characterSlice/types';
 import { GridLayout } from '@@/components/shared/layouts/GridLayout';
 import { Cart } from '@@/components/shared/ui/Cart';
 import { ErrorMessage } from '@@/components/shared/ui/ErrorMessage';
 import { Loader } from '@@/components/shared/ui/Loader';
-import { useAppSelector } from '@@/store/hooks';
-import { Character } from '@@/store/slices/characterSlice/types';
-import { CharacterModal } from '../';
+import { CharacterModal } from '../Modal/CharacterModal';
 import { CharacterSidebar } from './CharacterSidebar';
 
 export const CharacterGrid = memo(() => {

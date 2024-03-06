@@ -1,13 +1,12 @@
 import { useCallback, useEffect } from 'react';
-import { EpisodeTable } from '@@/components/Episode';
-import { EpisodeGrid } from '@@/components/Episode/EpisodeGrid';
+import { useAppDispatch, useAppSelector } from '@@/store/hooks';
+import { episodeFind, setDataMode } from '@@/store/slices/episodeSlice';
+import { DATA_MODE } from '@@/store/slices/types';
+import { EpisodeTable, EpisodeGrid } from '@@/components/Episode';
 import { ContainerLayout, ModeLayout } from '@@/components/shared/layouts';
 import { Button } from '@@/components/shared/ui/Button';
 import { GridIcon } from '@@/components/shared/ui/icons/GridIcon';
 import { TableIcon } from '@@/components/shared/ui/icons/TableIcon';
-import { useAppDispatch, useAppSelector } from '@@/store/hooks';
-import { episodeFind, setDataMode } from '@@/store/slices/episodeSlice';
-import { DATA_MODE } from '@@/store/slices/types';
 import { debounce } from '@@/utils/debounce';
 
 const component = {

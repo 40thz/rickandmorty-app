@@ -1,5 +1,5 @@
-import { locationService } from '@@/services/location.service';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { locationService } from '@@/services/location.service';
 import { LocationState } from './types';
 
 export const locationFind = createAsyncThunk('location/find', async (_, { getState }) => {

@@ -1,6 +1,6 @@
-import { InputColumnFilter } from '@@/components/shared/Table';
 import { useAppSelector } from '@@/store/hooks';
 import { setOptions } from '@@/store/slices/locationSlice';
+import { InputColumnFilter } from '@@/components/shared/Table';
 
 export const LocationSidebar = () => {
   const { name, type, dimension } = useAppSelector((state) => state.location.options);

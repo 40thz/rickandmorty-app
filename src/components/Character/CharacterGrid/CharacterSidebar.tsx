@@ -1,7 +1,7 @@
-import { InputColumnFilter, SelectorColumnFilter } from '@@/components/shared/Table';
-import { genderOptionData, statusOptionData } from '@@/constants/character';
 import { useAppSelector } from '@@/store/hooks';
 import { setOptions } from '@@/store/slices/characterSlice';
+import { genderOptionData, statusOptionData } from '@@/constants/character';
+import { InputColumnFilter, SelectorColumnFilter } from '@@/components/shared/Table';
 
 export const CharacterSidebar = () => {
   const { name, gender, species, type, status } = useAppSelector((state) => state.character.options);

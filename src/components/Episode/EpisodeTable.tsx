@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
-import { InputColumnFilter, Table, TableRowType } from '@@/components/shared/Table';
 import { useAppSelector } from '@@/store/hooks';
 import { setOptions } from '@@/store/slices/episodeSlice';
 import { Episode } from '@@/store/slices/episodeSlice/types';
+import { InputColumnFilter, Table, TableRowType } from '@@/components/shared/Table';
 import { EpisodeModal } from './Modal/EpisodeModal';
 
 export const EpisodeTable = () => {
@@ -29,5 +29,5 @@ export const EpisodeTable = () => {
     ];
   }, [options]);
 
-  return <Table<Episode> columns={columns} data={data} status={status} />;
+  return <Table columns={columns} data={data} status={status} />;
 };

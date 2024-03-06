@@ -1,10 +1,10 @@
 import { memo } from 'react';
+import { useAppSelector } from '@@/store/hooks';
+import { Location } from '@@/store/slices/locationSlice/types';
 import { GridLayout } from '@@/components/shared/layouts/GridLayout';
 import { Cart } from '@@/components/shared/ui/Cart';
 import { ErrorMessage } from '@@/components/shared/ui/ErrorMessage';
 import { Loader } from '@@/components/shared/ui/Loader';
-import { useAppSelector } from '@@/store/hooks';
-import { Location } from '@@/store/slices/locationSlice/types';
 import { LocationModal } from '../Modal/LocationModal';
 import { LocationSidebar } from './LocationSidebar';
 

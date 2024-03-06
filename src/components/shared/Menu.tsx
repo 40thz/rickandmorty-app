@@ -1,7 +1,7 @@
 import { memo, useContext } from 'react';
 import { AppContext, TAB_VALUES } from '@@/context/AppContext';
-import { localStorageService } from '@@/utils/LocalStorageService';
 import classNames from 'classnames';
+import { localStorageService } from '@@/utils/LocalStorageService';
 import { Button } from './ui/Button';
 
 interface MenuProps extends React.HTMLAttributes<HTMLDivElement> {

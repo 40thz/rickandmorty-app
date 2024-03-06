@@ -1,2 +1,2 @@
-export * from './Modal/CharacterModal';
 export * from './CharacterTable';
+export * from './CharacterGrid';

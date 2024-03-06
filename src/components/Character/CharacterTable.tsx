@@ -1,10 +1,10 @@
 import { useMemo } from 'react';
-import { CharacterModal } from '@@/components/Character';
-import { InputColumnFilter, SelectorColumnFilter, Table, TableRowType } from '@@/components/shared/Table';
-import { genderOptionData, statusOptionData } from '@@/constants/character';
 import { useAppSelector } from '@@/store/hooks';
 import { setOptions } from '@@/store/slices/characterSlice';
 import { Character } from '@@/store/slices/characterSlice/types';
+import { genderOptionData, statusOptionData } from '@@/constants/character';
+import { InputColumnFilter, SelectorColumnFilter, Table, TableRowType } from '@@/components/shared/Table';
+import { CharacterModal } from './Modal/CharacterModal';
 
 export const CharacterTable = () => {
   const { data, options, status } = useAppSelector((state) => state.character);
@@ -66,5 +66,5 @@ export const CharacterTable = () => {
     ];
   }, [options]);
 
-  return <Table<Character> columns={columns} data={data} status={status} />;
+  return <Table columns={columns} data={data} status={status} />;
 };

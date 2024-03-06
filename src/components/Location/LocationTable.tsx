@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
-import { InputColumnFilter, Table, TableRowType } from '@@/components/shared/Table';
 import { useAppSelector } from '@@/store/hooks';
 import { setOptions } from '@@/store/slices/locationSlice';
 import { Location } from '@@/store/slices/locationSlice/types';
+import { InputColumnFilter, Table, TableRowType } from '@@/components/shared/Table';
 import { LocationModal } from './Modal/LocationModal';
 
 export const LocationTable = () => {
@@ -30,5 +30,5 @@ export const LocationTable = () => {
     ];
   }, [options]);
 
-  return <Table<Location> columns={columns} data={data} status={status} />;
+  return <Table columns={columns} data={data} status={status} />;
 };

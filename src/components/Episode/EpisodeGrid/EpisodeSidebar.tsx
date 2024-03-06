@@ -1,6 +1,6 @@
-import { InputColumnFilter } from '@@/components/shared/Table';
 import { useAppSelector } from '@@/store/hooks';
 import { setOptions } from '@@/store/slices/episodeSlice';
+import { InputColumnFilter } from '@@/components/shared/Table';
 
 export const EpisodeSidebar = () => {
   const { name, episode } = useAppSelector((state) => state.episode.options);

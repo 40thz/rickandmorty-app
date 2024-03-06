@@ -1,13 +1,12 @@
 import { useCallback, useEffect } from 'react';
-import { LocationTable } from '@@/components/Location';
-import { LocationGrid } from '@@/components/Location/LocationGrid';
+import { useAppDispatch, useAppSelector } from '@@/store/hooks';
+import { locationFind, setDataMode } from '@@/store/slices/locationSlice';
+import { DATA_MODE } from '@@/store/slices/types';
+import { LocationTable, LocationGrid } from '@@/components/Location';
 import { ContainerLayout, ModeLayout } from '@@/components/shared/layouts';
 import { Button } from '@@/components/shared/ui/Button';
 import { GridIcon } from '@@/components/shared/ui/icons/GridIcon';
 import { TableIcon } from '@@/components/shared/ui/icons/TableIcon';
-import { useAppDispatch, useAppSelector } from '@@/store/hooks';
-import { locationFind, setDataMode } from '@@/store/slices/locationSlice';
-import { DATA_MODE } from '@@/store/slices/types';
 import { debounce } from '@@/utils/debounce';
 
 const component = {

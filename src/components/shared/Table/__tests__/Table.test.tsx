@@ -64,38 +64,38 @@ describe('Table component', () => {
   };
 
   it('Table render', () => {
-    render(<Table<Character> columns={MOCK_COLUMNS} data={MOCK_DATA} status={MOCK_STATUS} />);
+    render(<Table columns={MOCK_COLUMNS} data={MOCK_DATA} status={MOCK_STATUS} />);
 
     expect(screen.getByRole('table')).not.toEqual(null);
   });
 
   it('Should render columns', () => {
-    render(<Table<Character> columns={MOCK_COLUMNS} data={MOCK_DATA} status={MOCK_STATUS} />);
+    render(<Table columns={MOCK_COLUMNS} data={MOCK_DATA} status={MOCK_STATUS} />);
 
     expect(screen.getAllByTestId(/col/i)).not.toEqual(null);
   });
 
   it('Should render row', () => {
-    render(<Table<Character> columns={[] as TableRowType<Character>[]} data={MOCK_DATA} status={MOCK_STATUS} />);
+    render(<Table columns={[] as TableRowType<Character>[]} data={MOCK_DATA} status={MOCK_STATUS} />);
 
     expect(screen.getAllByTestId(/row/i)).not.toEqual(null);
   });
 
   it('Should render cell', () => {
-    render(<Table<Character> columns={MOCK_COLUMNS} data={MOCK_DATA} status={MOCK_STATUS} />);
+    render(<Table columns={MOCK_COLUMNS} data={MOCK_DATA} status={MOCK_STATUS} />);
 
     expect(screen.getAllByTestId(/cell/i)).not.toEqual(null);
   });
 
   it('Should cell must be reassigned', () => {
-    render(<Table<Character> columns={MOCK_COLUMNS} data={MOCK_DATA} status={MOCK_STATUS} />);
+    render(<Table columns={MOCK_COLUMNS} data={MOCK_DATA} status={MOCK_STATUS} />);
 
     expect(screen.getAllByTestId(/reassigned_cell/i)).not.toEqual(null);
   });
 
   it('Should show loading status', () => {
     render(
-      <Table<Character>
+      <Table
         columns={MOCK_COLUMNS}
         data={MOCK_DATA}
         status={{
@@ -110,7 +110,7 @@ describe('Table component', () => {
 
   it('Should show error message', () => {
     render(
-      <Table<Character>
+      <Table
         columns={MOCK_COLUMNS}
         data={MOCK_DATA}
         status={{

@@ -1,5 +1,5 @@
-import { episodeService } from '@@/services/episode.service';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { episodeService } from '@@/services/episode.service';
 import { EpisodeState } from './types';
 
 export const episodeFind = createAsyncThunk('episode/find', async (_, { getState }) => {
