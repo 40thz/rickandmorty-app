@@ -3,7 +3,7 @@ import { DATA_MODE } from '../types';
 import { episodeFind } from './reducers';
 import { EpisodeState } from './types';
 
-const initialState: EpisodeState = {
+export const initialState: EpisodeState = {
   mode: DATA_MODE.TABLE,
   options: {
     name: '',

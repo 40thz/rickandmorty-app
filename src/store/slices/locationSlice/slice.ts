@@ -3,7 +3,7 @@ import { DATA_MODE } from '../types';
 import { locationFind } from './reducers';
 import { LocationState } from './types';
 
-const initialState: LocationState = {
+export const initialState: LocationState = {
   mode: DATA_MODE.TABLE,
   options: {
     name: '',

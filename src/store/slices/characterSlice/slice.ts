@@ -3,7 +3,7 @@ import { DATA_MODE } from '../types';
 import { characterFind } from './reducers';
 import { CharacterState } from './types';
 
-const initialState: CharacterState = {
+export const initialState: CharacterState = {
   mode: DATA_MODE.TABLE,
   options: {
     name: '',

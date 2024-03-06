@@ -1,0 +1,482 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Episode component Should be render 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex flex-col gap-3 w-full h-full"
+      >
+        <div
+          class="flex flex-col items-center gap-3 max-w-[400px] w-full bg-dark/85 px-3 py-5 rounded-xl"
+        >
+          <div
+            class="flex justify-center gap-4"
+          >
+            <button
+              class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray"
+            >
+               
+              Characters
+            </button>
+            <button
+              class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray"
+            >
+               
+              Episodes
+            </button>
+            <button
+              class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray"
+            >
+               
+              Locations
+            </button>
+          </div>
+        </div>
+        <div
+          class="flex gap-3 bg-dark/85 rounded-lg w-fit p-2"
+        >
+          <button
+            class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray"
+            title="TABLE MODE"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M4 7C4 5.34315 5.34315 4 7 4H12H17C18.6569 4 20 5.34315 20 7V12V17C20 18.6569 18.6569 20 17 20H12H7C5.34315 20 4 18.6569 4 17V12V7ZM7 6C6.44772 6 6 6.44772 6 7V11H11V6H7ZM13 6V11H18V7C18 6.44772 17.5523 6 17 6H13ZM18 13H13V18H17C17.5523 18 18 17.5523 18 17V13ZM11 18V13H6V17C6 17.5523 6.44772 18 7 18H11Z"
+                fill="#ffffff8c"
+                fill-rule="evenodd"
+              />
+            </svg>
+             
+          </button>
+          <button
+            class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray"
+            title="GRID MODE"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 5.6C14 5.03995 14 4.75992 14.109 4.54601C14.2049 4.35785 14.3578 4.20487 14.546 4.10899C14.7599 4 15.0399 4 15.6 4H18.4C18.9601 4 19.2401 4 19.454 4.10899C19.6422 4.20487 19.7951 4.35785 19.891 4.54601C20 4.75992 20 5.03995 20 5.6V8.4C20 8.96005 20 9.24008 19.891 9.45399C19.7951 9.64215 19.6422 9.79513 19.454 9.89101C19.2401 10 18.9601 10 18.4 10H15.6C15.0399 10 14.7599 10 14.546 9.89101C14.3578 9.79513 14.2049 9.64215 14.109 9.45399C14 9.24008 14 8.96005 14 8.4V5.6Z"
+                stroke="#ffffff8c"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M4 5.6C4 5.03995 4 4.75992 4.10899 4.54601C4.20487 4.35785 4.35785 4.20487 4.54601 4.10899C4.75992 4 5.03995 4 5.6 4H8.4C8.96005 4 9.24008 4 9.45399 4.10899C9.64215 4.20487 9.79513 4.35785 9.89101 4.54601C10 4.75992 10 5.03995 10 5.6V8.4C10 8.96005 10 9.24008 9.89101 9.45399C9.79513 9.64215 9.64215 9.79513 9.45399 9.89101C9.24008 10 8.96005 10 8.4 10H5.6C5.03995 10 4.75992 10 4.54601 9.89101C4.35785 9.79513 4.20487 9.64215 4.10899 9.45399C4 9.24008 4 8.96005 4 8.4V5.6Z"
+                stroke="#ffffff8c"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M4 15.6C4 15.0399 4 14.7599 4.10899 14.546C4.20487 14.3578 4.35785 14.2049 4.54601 14.109C4.75992 14 5.03995 14 5.6 14H8.4C8.96005 14 9.24008 14 9.45399 14.109C9.64215 14.2049 9.79513 14.3578 9.89101 14.546C10 14.7599 10 15.0399 10 15.6V18.4C10 18.9601 10 19.2401 9.89101 19.454C9.79513 19.6422 9.64215 19.7951 9.45399 19.891C9.24008 20 8.96005 20 8.4 20H5.6C5.03995 20 4.75992 20 4.54601 19.891C4.35785 19.7951 4.20487 19.6422 4.10899 19.454C4 19.2401 4 18.9601 4 18.4V15.6Z"
+                stroke="#ffffff8c"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M14 15.6C14 15.0399 14 14.7599 14.109 14.546C14.2049 14.3578 14.3578 14.2049 14.546 14.109C14.7599 14 15.0399 14 15.6 14H18.4C18.9601 14 19.2401 14 19.454 14.109C19.6422 14.2049 19.7951 14.3578 19.891 14.546C20 14.7599 20 15.0399 20 15.6V18.4C20 18.9601 20 19.2401 19.891 19.454C19.7951 19.6422 19.6422 19.7951 19.454 19.891C19.2401 20 18.9601 20 18.4 20H15.6C15.0399 20 14.7599 20 14.546 19.891C14.3578 19.7951 14.2049 19.6422 14.109 19.454C14 19.2401 14 18.9601 14 18.4V15.6Z"
+                stroke="#ffffff8c"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+             
+          </button>
+        </div>
+        <div
+          class="rounded-2xl overflow-hidden"
+        >
+          <div
+            class="relative overflow-x-auto h-[400px] bg-dark/95"
+          >
+            <table
+              class="w-full text-sm text-left rtl:text-right text-white"
+            >
+              <thead
+                class="text-xs uppercase text-white/55"
+              >
+                <tr>
+                  <th
+                    class="px-6 py-3 pt-5 bg-dark align-top"
+                    data-testid="col"
+                    scope="col"
+                  >
+                    <div
+                      class="flex flex-col gap-2"
+                    >
+                      <div>
+                        Name
+                      </div>
+                      <div
+                        class="max-w-[150px]"
+                      >
+                        <label>
+                          <input
+                            class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray w-full"
+                            id="default-input"
+                            type="text"
+                            value=""
+                          />
+                        </label>
+                      </div>
+                    </div>
+                  </th>
+                  <th
+                    class="px-6 py-3 pt-5 bg-dark align-top"
+                    data-testid="col"
+                    scope="col"
+                  >
+                    <div
+                      class="flex flex-col gap-2"
+                    >
+                      <div>
+                        Episode
+                      </div>
+                      <div
+                        class="max-w-[150px]"
+                      >
+                        <label>
+                          <input
+                            class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray w-full"
+                            id="default-input"
+                            type="text"
+                            value=""
+                          />
+                        </label>
+                      </div>
+                    </div>
+                  </th>
+                  <th
+                    class="px-6 py-3 pt-5 bg-dark align-top"
+                    data-testid="col"
+                    scope="col"
+                  >
+                    <div
+                      class="flex flex-col gap-2"
+                    >
+                      <div>
+                        Air date
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="relative overflow-x-auto max-h-[300px]"
+              />
+            </table>
+            <div
+              class="flex justify-center mt-6"
+              role="status"
+            >
+              <svg
+                aria-hidden="true"
+                class="inline w-[40px] h-[40px] text-gray-200 animate-spin dark:text-gray-600 fill-gray-600 dark:fill-gray-300"
+                fill="none"
+                viewBox="0 0 100 101"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                  fill="gray"
+                />
+                <path
+                  d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                  fill="white"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Loading...
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex justify-end bg-dark px-9 py-4"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex flex-col gap-3 w-full h-full"
+    >
+      <div
+        class="flex flex-col items-center gap-3 max-w-[400px] w-full bg-dark/85 px-3 py-5 rounded-xl"
+      >
+        <div
+          class="flex justify-center gap-4"
+        >
+          <button
+            class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray"
+          >
+             
+            Characters
+          </button>
+          <button
+            class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray"
+          >
+             
+            Episodes
+          </button>
+          <button
+            class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray"
+          >
+             
+            Locations
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex gap-3 bg-dark/85 rounded-lg w-fit p-2"
+      >
+        <button
+          class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray"
+          title="TABLE MODE"
+        >
+          <svg
+            fill="none"
+            height="20"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M4 7C4 5.34315 5.34315 4 7 4H12H17C18.6569 4 20 5.34315 20 7V12V17C20 18.6569 18.6569 20 17 20H12H7C5.34315 20 4 18.6569 4 17V12V7ZM7 6C6.44772 6 6 6.44772 6 7V11H11V6H7ZM13 6V11H18V7C18 6.44772 17.5523 6 17 6H13ZM18 13H13V18H17C17.5523 18 18 17.5523 18 17V13ZM11 18V13H6V17C6 17.5523 6.44772 18 7 18H11Z"
+              fill="#ffffff8c"
+              fill-rule="evenodd"
+            />
+          </svg>
+           
+        </button>
+        <button
+          class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray"
+          title="GRID MODE"
+        >
+          <svg
+            fill="none"
+            height="20"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 5.6C14 5.03995 14 4.75992 14.109 4.54601C14.2049 4.35785 14.3578 4.20487 14.546 4.10899C14.7599 4 15.0399 4 15.6 4H18.4C18.9601 4 19.2401 4 19.454 4.10899C19.6422 4.20487 19.7951 4.35785 19.891 4.54601C20 4.75992 20 5.03995 20 5.6V8.4C20 8.96005 20 9.24008 19.891 9.45399C19.7951 9.64215 19.6422 9.79513 19.454 9.89101C19.2401 10 18.9601 10 18.4 10H15.6C15.0399 10 14.7599 10 14.546 9.89101C14.3578 9.79513 14.2049 9.64215 14.109 9.45399C14 9.24008 14 8.96005 14 8.4V5.6Z"
+              stroke="#ffffff8c"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <path
+              d="M4 5.6C4 5.03995 4 4.75992 4.10899 4.54601C4.20487 4.35785 4.35785 4.20487 4.54601 4.10899C4.75992 4 5.03995 4 5.6 4H8.4C8.96005 4 9.24008 4 9.45399 4.10899C9.64215 4.20487 9.79513 4.35785 9.89101 4.54601C10 4.75992 10 5.03995 10 5.6V8.4C10 8.96005 10 9.24008 9.89101 9.45399C9.79513 9.64215 9.64215 9.79513 9.45399 9.89101C9.24008 10 8.96005 10 8.4 10H5.6C5.03995 10 4.75992 10 4.54601 9.89101C4.35785 9.79513 4.20487 9.64215 4.10899 9.45399C4 9.24008 4 8.96005 4 8.4V5.6Z"
+              stroke="#ffffff8c"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <path
+              d="M4 15.6C4 15.0399 4 14.7599 4.10899 14.546C4.20487 14.3578 4.35785 14.2049 4.54601 14.109C4.75992 14 5.03995 14 5.6 14H8.4C8.96005 14 9.24008 14 9.45399 14.109C9.64215 14.2049 9.79513 14.3578 9.89101 14.546C10 14.7599 10 15.0399 10 15.6V18.4C10 18.9601 10 19.2401 9.89101 19.454C9.79513 19.6422 9.64215 19.7951 9.45399 19.891C9.24008 20 8.96005 20 8.4 20H5.6C5.03995 20 4.75992 20 4.54601 19.891C4.35785 19.7951 4.20487 19.6422 4.10899 19.454C4 19.2401 4 18.9601 4 18.4V15.6Z"
+              stroke="#ffffff8c"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <path
+              d="M14 15.6C14 15.0399 14 14.7599 14.109 14.546C14.2049 14.3578 14.3578 14.2049 14.546 14.109C14.7599 14 15.0399 14 15.6 14H18.4C18.9601 14 19.2401 14 19.454 14.109C19.6422 14.2049 19.7951 14.3578 19.891 14.546C20 14.7599 20 15.0399 20 15.6V18.4C20 18.9601 20 19.2401 19.891 19.454C19.7951 19.6422 19.6422 19.7951 19.454 19.891C19.2401 20 18.9601 20 18.4 20H15.6C15.0399 20 14.7599 20 14.546 19.891C14.3578 19.7951 14.2049 19.6422 14.109 19.454C14 19.2401 14 18.9601 14 18.4V15.6Z"
+              stroke="#ffffff8c"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+           
+        </button>
+      </div>
+      <div
+        class="rounded-2xl overflow-hidden"
+      >
+        <div
+          class="relative overflow-x-auto h-[400px] bg-dark/95"
+        >
+          <table
+            class="w-full text-sm text-left rtl:text-right text-white"
+          >
+            <thead
+              class="text-xs uppercase text-white/55"
+            >
+              <tr>
+                <th
+                  class="px-6 py-3 pt-5 bg-dark align-top"
+                  data-testid="col"
+                  scope="col"
+                >
+                  <div
+                    class="flex flex-col gap-2"
+                  >
+                    <div>
+                      Name
+                    </div>
+                    <div
+                      class="max-w-[150px]"
+                    >
+                      <label>
+                        <input
+                          class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray w-full"
+                          id="default-input"
+                          type="text"
+                          value=""
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="px-6 py-3 pt-5 bg-dark align-top"
+                  data-testid="col"
+                  scope="col"
+                >
+                  <div
+                    class="flex flex-col gap-2"
+                  >
+                    <div>
+                      Episode
+                    </div>
+                    <div
+                      class="max-w-[150px]"
+                    >
+                      <label>
+                        <input
+                          class="text-white/55 rounded-[6px] block w py-1 px-2 bg-gray w-full"
+                          id="default-input"
+                          type="text"
+                          value=""
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </th>
+                <th
+                  class="px-6 py-3 pt-5 bg-dark align-top"
+                  data-testid="col"
+                  scope="col"
+                >
+                  <div
+                    class="flex flex-col gap-2"
+                  >
+                    <div>
+                      Air date
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="relative overflow-x-auto max-h-[300px]"
+            />
+          </table>
+          <div
+            class="flex justify-center mt-6"
+            role="status"
+          >
+            <svg
+              aria-hidden="true"
+              class="inline w-[40px] h-[40px] text-gray-200 animate-spin dark:text-gray-600 fill-gray-600 dark:fill-gray-300"
+              fill="none"
+              viewBox="0 0 100 101"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                fill="gray"
+              />
+              <path
+                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                fill="white"
+              />
+            </svg>
+            <span
+              class="sr-only"
+            >
+              Loading...
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex justify-end bg-dark px-9 py-4"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
