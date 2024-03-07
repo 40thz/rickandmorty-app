@@ -21,14 +21,10 @@ type Origin = {
 export type Character = {
   id: number;
   name: string;
-  status: CHARACTER_STATUS.ALIVE | CHARACTER_STATUS.DEAD | CHARACTER_STATUS.UNKNOWN;
+  status: CHARACTER_STATUS;
   species: string;
   type: string;
-  gender:
-    | CHARACTER_GENDER.FEMALE
-    | CHARACTER_GENDER.GENDERLESS
-    | CHARACTER_GENDER.GENDERLESS
-    | CHARACTER_GENDER.UNKNOWN;
+  gender: CHARACTER_GENDER;
   origin: Origin;
   location: Origin;
   image: string;
