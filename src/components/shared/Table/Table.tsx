@@ -1,7 +1,6 @@
 import { memo } from 'react';
-import { getNested } from '@@/utils/getNested';
-import { ErrorMessage } from '../ui/ErrorMessage';
-import { Loader } from '../ui/Loader';
+import { getNested } from '@@/utils';
+import { Loader, ErrorMessage } from '@@/components/shared/ui';
 import { TableProps } from './types';
 
 export const TableComponent = <T,>({ columns, data, status: { isLoading, error } }: TableProps<T>) => {

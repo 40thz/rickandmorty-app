@@ -1,10 +1,8 @@
 import { useState } from 'react';
+import { Character, Episode, Location } from '@@/containers';
+import { localStorageService } from '@@/utils';
 import { Menu } from '@@/components/shared/Menu';
-import { Character } from '@@/containers/Character';
-import { Episode } from '@@/containers/Episode';
-import { Location } from '@@/containers/Location';
-import { localStorageService } from '@@/utils/LocalStorageService';
-import { AppContext, TAB_VALUES } from './context/AppContext';
+import { AppContext, TAB_VALUES } from './context';
 
 const currentTabFromStorage: TAB_VALUES = localStorageService.getStorageItem('tab') as TAB_VALUES;
 

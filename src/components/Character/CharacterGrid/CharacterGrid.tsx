@@ -2,9 +2,7 @@ import { memo } from 'react';
 import { useAppSelector } from '@@/store/hooks';
 import { Character } from '@@/store/slices/characterSlice/types';
 import { GridLayout } from '@@/components/shared/layouts/GridLayout';
-import { Cart } from '@@/components/shared/ui/Cart';
-import { ErrorMessage } from '@@/components/shared/ui/ErrorMessage';
-import { Loader } from '@@/components/shared/ui/Loader';
+import { Loader, Cart, ErrorMessage } from '@@/components/shared/ui';
 import { CharacterModal } from '../Modal/CharacterModal';
 import { CharacterSidebar } from './CharacterSidebar';
 

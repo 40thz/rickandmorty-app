@@ -1,6 +1,6 @@
 import { FC, memo, useCallback } from 'react';
 import { useAppDispatch } from '@@/store/hooks';
-import { Input, InputProps } from '@@/components/shared/ui/Input';
+import { Input, InputProps } from '@@/components/shared/ui';
 import { FilterProps } from './types';
 
 type InputFilterProps = FilterProps & InputProps;

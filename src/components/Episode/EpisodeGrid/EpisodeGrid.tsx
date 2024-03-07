@@ -2,9 +2,7 @@ import { memo } from 'react';
 import { useAppSelector } from '@@/store/hooks';
 import { Episode } from '@@/store/slices/episodeSlice/types';
 import { GridLayout } from '@@/components/shared/layouts/GridLayout';
-import { Cart } from '@@/components/shared/ui/Cart';
-import { ErrorMessage } from '@@/components/shared/ui/ErrorMessage';
-import { Loader } from '@@/components/shared/ui/Loader';
+import { Loader, Cart, ErrorMessage } from '@@/components/shared/ui';
 import { EpisodeModal } from '../Modal/EpisodeModal';
 import { EpisodeSidebar } from './EpisodeSidebar';
 

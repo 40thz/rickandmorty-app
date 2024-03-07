@@ -1,11 +1,9 @@
 import { FC, PropsWithChildren, memo, useCallback, useEffect, useRef, useState } from 'react';
 import { Character } from '@@/store/slices/characterSlice/types';
+import { getIdFromUrlArray } from '@@/utils';
 import { CellInfo } from '@@/components/shared/Table';
-import { ErrorMessage } from '@@/components/shared/ui/ErrorMessage';
-import { Loader } from '@@/components/shared/ui/Loader';
-import { Modal } from '@@/components/shared/ui/Modal';
+import { Loader, Modal, ErrorMessage } from '@@/components/shared/ui';
 import { useRequest } from '@@/hooks/useRequest';
-import { getIdFromUrlArray } from '@@/utils/getIdFromUrlArr';
 import { episodeService } from '@@/services/episode.service';
 import { CharacterInformation } from './CharacterInformation';
 

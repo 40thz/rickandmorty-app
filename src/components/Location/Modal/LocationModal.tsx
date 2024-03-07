@@ -1,11 +1,9 @@
 import { FC, PropsWithChildren, memo, useCallback, useEffect, useRef, useState } from 'react';
 import { Location } from '@@/store/slices/locationSlice/types';
+import { getIdFromUrlArray } from '@@/utils';
 import { CellInfo } from '@@/components/shared/Table';
-import { ErrorMessage } from '@@/components/shared/ui/ErrorMessage';
-import { Loader } from '@@/components/shared/ui/Loader';
-import { Modal } from '@@/components/shared/ui/Modal';
+import { Loader, Modal, ErrorMessage } from '@@/components/shared/ui';
 import { useRequest } from '@@/hooks/useRequest';
-import { getIdFromUrlArray } from '@@/utils/getIdFromUrlArr';
 import { characterService } from '@@/services/character.service';
 import { LocationIformation } from './LocationIformation';
 

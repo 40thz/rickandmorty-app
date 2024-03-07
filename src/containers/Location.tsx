@@ -2,12 +2,11 @@ import { useCallback, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '@@/store/hooks';
 import { locationFind, setDataMode } from '@@/store/slices/locationSlice';
 import { DATA_MODE } from '@@/store/slices/types';
+import { debounce } from '@@/utils';
 import { LocationTable, LocationGrid } from '@@/components/Location';
 import { ContainerLayout, ModeLayout } from '@@/components/shared/layouts';
 import { Button } from '@@/components/shared/ui/Button';
-import { GridIcon } from '@@/components/shared/ui/icons/GridIcon';
-import { TableIcon } from '@@/components/shared/ui/icons/TableIcon';
-import { debounce } from '@@/utils/debounce';
+import { TableIcon, GridIcon } from '@@/components/shared/ui/icons';
 
 const component = {
   [DATA_MODE.TABLE]: <LocationTable />,
